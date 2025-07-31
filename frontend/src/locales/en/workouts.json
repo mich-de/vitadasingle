@@ -1,0 +1,44 @@
+{
+  "errorCreating": "Error creating workout",
+  "errorUpdating": "Error updating workout",
+  "errorDeleting": "Error deleting workout",
+  "title": "Workouts",
+  "startWorkout": "Start Workout",
+  "addNew": "Add New Workout",
+  "dataSource": "Data loaded from: <code>/data/workouts.json</code>",
+  "totalWorkouts": "Total Workouts",
+  "thisWeek": "This week",
+  "totalTime": "Total Time",
+  "avgDuration": "Avg. Duration",
+  "caloriesBurned": "Calories Burned",
+  "progress": "Progress",
+  "vsLastWeek": "vs. last week",
+  "all": "All",
+  "type": {
+    "strength": "Strength",
+    "cardio": "Cardio",
+    "flexibility": "Flexibility",
+    "sports": "Sports"
+  },
+  "recent": "Recent Workouts",
+  "intensity": {
+    "low": "Low",
+    "moderate": "Moderate",
+    "high": "High",
+    "extreme": "Extreme"
+  },
+  "exercises": "Exercises",
+  "notes": "Notes",
+  "viewDetails": "View Details",
+  "loading": "Loading workouts...",
+  "error": "Error loading workouts",
+  "retry": "Retry",
+  "confirmDelete": "Are you sure you want to delete this workout?",
+  "errorLoading": "Unable to load workouts from JSON database",
+  "errors": {
+    "load": "Could not load workouts.",
+    "create": "An error occurred while creating the workout.",
+    "update": "An error occurred while updating the workout.",
+    "delete": "Could not delete the workout."
+  }
+}

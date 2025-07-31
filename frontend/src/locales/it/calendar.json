@@ -1,0 +1,32 @@
+{
+  "title": "Calendario",
+  "allEvents": "Tutti gli eventi",
+  "shared": "Condivisi",
+  "public": "Pubblici",
+  "archived": "Archiviati",
+  "searchPlaceholder": "Cerca",
+  "today": "Oggi",
+  "monthView": "Vista Mese",
+  "weekView": "Vista Settimana",
+  "dayView": "Vista Giorno",
+  "addEvent": "Aggiungi evento",
+  "errorLoading": "Impossibile caricare: ",
+  "loading": "Caricamento calendario...",
+  "error": "Errore durante il caricamento dei dati del calendario",
+  "day": "Giorno",
+  "weekday": "Giorno della settimana",
+  "month": "Mese",
+  "year": "Anno",
+  "more": "altro...",
+  "locale": "it-IT",
+  "days": {
+    "mon": "Lun",
+    "tue": "Mar",
+    "wed": "Mer",
+    "thu": "Gio",
+    "fri": "Ven",
+    "sat": "Sab",
+    "sun": "Dom"
+  },
+  "dataSource": "📅 Dati caricati da:<br><code>/data/scadenze.json</code><br><code>/data/eventi.json</code><br><code>/data/bookings.json</code>"
+}

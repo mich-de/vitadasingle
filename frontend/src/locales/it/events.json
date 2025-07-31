@@ -1,0 +1,42 @@
+{
+  "title": "Eventi",
+  "dataSource": "🎉 Dati caricati da",
+  "dataSourcePath": "<code>/data/eventi.json</code>",
+  "loadError": "Impossibile caricare gli eventi dal database JSON",
+  "confirmDelete": "Sei sicuro di voler eliminare questo evento?",
+  "deleteError": "Impossibile eliminare l'evento",
+  "addNew": "Aggiungi nuovo evento",
+  "loading": "Caricamento eventi dal database JSON...",
+  "filters": {
+    "all": "Tutti",
+    "today": "Oggi",
+    "week": "Questa settimana",
+    "work": "Lavoro",
+    "health": "Salute",
+    "social": "Sociale",
+    "travel": "Viaggio",
+    "personal": "Personale",
+    "other": "Altro"
+  },
+  "dates": {
+    "today": "Oggi",
+    "tomorrow": "Domani",
+    "thisWeek": "Questa settimana"
+  },
+  "upcoming": "Prossimi",
+  "noEvents": "Nessun evento trovato",
+  "noEventsForFilter": "Nessun evento per il filtro selezionato.",
+  "addFirst": "Aggiungi il tuo primo evento.",
+  "add": "Aggiungi evento",
+  "calendarViewNotImplemented": "La vista calendario non è ancora implementata.",
+  "upcomingEvents": "Eventi prossimi",
+  "noEventsFound": "Nessun evento trovato",
+  "addFirstEvent": "Aggiungi il tuo primo evento.",
+  "addEvent": "Aggiungi evento",
+  "errors": {
+    "load": "Impossibile caricare gli eventi.",
+    "create": "Si è verificato un errore durante la creazione dell'evento.",
+    "update": "Si è verificato un errore durante l'aggiornamento dell'evento.",
+    "delete": "Impossibile eliminare l'evento."
+  }
+}

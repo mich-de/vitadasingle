@@ -1,0 +1,116 @@
+{
+  "title": "Demo Componenti",
+  "subtitle": "Questa pagina dimostra i componenti UI disponibili.",
+  "buttons": {
+    "title": "Pulsanti",
+    "variants": "Varianti",
+    "primary": "Primario",
+    "secondary": "Secondario",
+    "danger": "Pericolo",
+    "outline": "Contorno",
+    "sizes": "Dimensioni",
+    "small": "Piccolo",
+    "medium": "Medio",
+    "large": "Grande",
+    "withIcons": "Con Icone",
+    "addNew": "Aggiungi Nuovo",
+    "states": "Stati",
+    "disabled": "Disabilitato",
+    "loading": "Caricamento",
+    "loadingWithIcon": "Caricamento"
+  },
+  "formControls": {
+    "title": "Controlli Modulo",
+    "inputBase": {
+      "label": "Input Base",
+      "placeholder": "Inserisci testo...",
+      "helperText": "Questo è un testo di aiuto."
+    },
+    "inputWithIcon": {
+      "label": "Input con Icona",
+      "placeholder": "Impostazioni..."
+    },
+    "inputRequired": {
+      "label": "Input Richiesto",
+      "placeholder": "Questo campo è obbligatorio"
+    },
+    "inputWithError": {
+      "label": "Input con Errore",
+      "value": "email.nonvalida@",
+      "error": "Inserisci un'email valida."
+    },
+    "selectBase": {
+      "label": "Select Base",
+      "placeholder": "Seleziona un'opzione"
+    },
+    "selectRequired": {
+      "label": "Select Richiesta"
+    },
+    "selectWithError": {
+      "label": "Select con Errore",
+      "error": "Questo campo è obbligatorio."
+    },
+    "inputDisabled": {
+      "label": "Input Disabilitato",
+      "value": "Non puoi cambiarmi"
+    }
+  },
+  "toastNotifications": {
+    "title": "Notifiche Toast",
+    "success": "Mostra Successo",
+    "error": "Mostra Errore",
+    "warning": "Mostra Avviso",
+    "info": "Mostra Info"
+  },
+  "modals": {
+    "title": "Modali",
+    "openDemoModal": "Apri Modale Demo",
+    "openExpenseModal": "Apri Modale Spesa",
+    "openDeleteModal": "Apri Modale Eliminazione",
+    "demoModal": {
+      "title": "Modale Demo",
+      "description": "Questo è un componente modale generico.",
+      "content": "Puoi inserire qualsiasi contenuto qui, come moduli, testo informativo o azioni."
+    },
+    "deleteModal": {
+      "confirmMessage": "Elemento eliminato con successo!",
+      "title": "Conferma Eliminazione",
+      "message": "Sei sicuro di voler eliminare questo elemento? Questa azione non può essere annullata."
+    }
+  },
+  "forms": {
+    "title": "Moduli",
+    "submitSuccess": "Modulo inviato con successo!"
+  },
+  "toastNotifications": {
+    "title": "Notifiche Toast",
+    "success": "Mostra Successo",
+    "error": "Mostra Errore",
+    "warning": "Mostra Avviso",
+    "info": "Mostra Info",
+    "messages": {
+      "success": "Operazione completata con successo!",
+      "error": "Si è verificato un errore durante l'operazione.",
+      "warning": "Attenzione: questa azione richiede conferma.",
+      "info": "Informazione: nuova funzionalità disponibile."
+    }
+  },
+  "formControls": {
+    "title": "Controlli Modulo",
+    "inputBase": {
+      "label": "Input Base",
+      "placeholder": "Inserisci testo...",
+      "helperText": "Questo è un testo di aiuto.",
+      "validationError": "Minimo 3 caratteri richiesti"
+    },
+    "selectBase": {
+      "label": "Select Base",
+      "placeholder": "Seleziona un'opzione",
+      "options": {
+        "option1": "Opzione 1",
+        "option2": "Opzione 2",
+        "option3": "Opzione 3"
+      }
+    }
+  }
+}

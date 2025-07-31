@@ -1,0 +1,66 @@
+[
+  {
+    "id": "1",
+    "title": "Spesa alimentare",
+    "amount": 87.45,
+    "date": "2025-06-26",
+    "category": "food",
+    "description": "Spesa settimanale al supermercato",
+    "paymentMethod": "card",
+    "recurring": false,
+    "frequency": null
+  },
+  {
+    "id": "2",
+    "title": "Bolletta elettricità",
+    "amount": 65.2,
+    "date": "2025-06-25",
+    "category": "utilities",
+    "description": "Bolletta energia elettrica bimestrale",
+    "paymentMethod": "transfer",
+    "recurring": true,
+    "frequency": "bimestrale"
+  },
+  {
+    "id": "3",
+    "title": "Carburante",
+    "amount": 45,
+    "date": "2025-06-24",
+    "category": "transport",
+    "description": "Rifornimento benzina",
+    "paymentMethod": "card",
+    "recurring": false
+  },
+  {
+    "id": "4",
+    "title": "Internet",
+    "amount": 29.99,
+    "date": "2025-06-23",
+    "category": "utilities",
+    "description": "Abbonamento internet casa",
+    "paymentMethod": "transfer",
+    "recurring": true,
+    "frequency": "mensile"
+  },
+  {
+    "id": "5",
+    "title": "Ristorante",
+    "amount": 58.5,
+    "date": "2025-06-22",
+    "category": "entertainment",
+    "description": "Cena fuori con amici",
+    "paymentMethod": "card",
+    "recurring": false
+  },
+  {
+    "id": "6",
+    "title": "Telefono",
+    "amount": 15.99,
+    "date": "2025-06-21",
+    "category": "utilities",
+    "description": "Abbonamento cellulare",
+    "paymentMethod": "transfer",
+    "recurring": true,
+    "frequency": "mensile"
+  }
+]

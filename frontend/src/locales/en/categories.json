@@ -1,0 +1,14 @@
+{
+  "work": "Work",
+  "health": "Health",
+  "social": "Social",
+  "travel": "Travel",
+  "personal": "Personal",
+  "other": "Other",
+  "financial": "Financial",
+  "legal": "Legal",
+  "medical": "Medical",
+  "contracts": "Contracts",
+  "taxes": "Taxes",
+  "insurance": "Insurance"
+}

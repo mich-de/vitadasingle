@@ -1,0 +1,65 @@
+{
+  "loadError": "Error loading documents",
+  "deleteError": "Error deleting document",
+  "loading": "Loading documents...",
+  "title": "Documents",
+  "addNew": "Add New Document",
+  "dataSource": "🗄️ Data loaded from: <code>/data/documenti.json</code>",
+  "storageUsage": "Storage Usage",
+  "searchPlaceholder": "Search documents...",
+  "filterByCategory": "Filter by category",
+  "sortBy": "Sort by",
+  "sort": {
+    "date": "Date",
+    "name": "Name",
+    "size": "Size"
+  },
+  "table": {
+    "name": "Name",
+    "type": "Type",
+    "category": "Category",
+    "dateModified": "Date Modified",
+    "size": "Size",
+    "actions": "Actions"
+  },
+  "actions": {
+    "download": "Download",
+    "share": "Share",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "noDocuments": "No documents found",
+  "noDocumentsMessage": "Add your first document to get started.",
+  "uploadFirst": "Upload First Document",
+  "summary": {
+    "title": "Documents Summary",
+    "totalDocuments": "Total Documents",
+    "totalSize": "Total Size",
+    "personal": "Personal",
+    "financial": "Financial",
+    "legal": "Legal",
+    "medical": "Medical",
+    "contracts": "Contracts",
+    "taxes": "Taxes",
+    "insurance": "Insurance",
+    "other": "Other"
+  },
+  "deleteTitle": "Delete Document",
+  "deleteMessage": "Are you sure you want to delete this document?",
+  "bytes": "Bytes",
+  "kb": "KB",
+  "mb": "MB",
+  "gb": "GB",
+  "fileSize": {
+    "bytes": "Bytes",
+    "kb": "KB",
+    "mb": "MB",
+    "gb": "GB"
+  },
+  "errors": {
+    "load": "Could not load documents.",
+    "create": "An error occurred while creating the document.",
+    "update": "An error occurred while updating the document.",
+    "delete": "Could not delete the document."
+  }
+}

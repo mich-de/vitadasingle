@@ -1,0 +1,116 @@
+{
+  "title": "Component Demo",
+  "subtitle": "This page demonstrates the available UI components.",
+  "buttons": {
+    "title": "Buttons",
+    "variants": "Variants",
+    "primary": "Primary",
+    "secondary": "Secondary",
+    "danger": "Danger",
+    "outline": "Outline",
+    "sizes": "Sizes",
+    "small": "Small",
+    "medium": "Medium",
+    "large": "Large",
+    "withIcons": "With Icons",
+    "addNew": "Add New",
+    "states": "States",
+    "disabled": "Disabled",
+    "loading": "Loading",
+    "loadingWithIcon": "Loading"
+  },
+  "formControls": {
+    "title": "Form Controls",
+    "inputBase": {
+      "label": "Base Input",
+      "placeholder": "Enter text...",
+      "helperText": "This is a helper text."
+    },
+    "inputWithIcon": {
+      "label": "Input with Icon",
+      "placeholder": "Settings..."
+    },
+    "inputRequired": {
+      "label": "Required Input",
+      "placeholder": "This field is required"
+    },
+    "inputWithError": {
+      "label": "Input with Error",
+      "value": "invalid.email@",
+      "error": "Please enter a valid email."
+    },
+    "selectBase": {
+      "label": "Base Select",
+      "placeholder": "Select an option"
+    },
+    "selectRequired": {
+      "label": "Required Select"
+    },
+    "selectWithError": {
+      "label": "Select with Error",
+      "error": "This field is required."
+    },
+    "inputDisabled": {
+      "label": "Disabled Input",
+      "value": "You can't change me"
+    }
+  },
+  "toastNotifications": {
+    "title": "Toast Notifications",
+    "success": "Show Success",
+    "error": "Show Error",
+    "warning": "Show Warning",
+    "info": "Show Info"
+  },
+  "modals": {
+    "title": "Modals",
+    "openDemoModal": "Open Demo Modal",
+    "openExpenseModal": "Open Expense Modal",
+    "openDeleteModal": "Open Delete Modal",
+    "demoModal": {
+      "title": "Demo Modal",
+      "description": "This is a generic modal component.",
+      "content": "You can put any content you want here, like forms, information text, or actions."
+    },
+    "deleteModal": {
+      "confirmMessage": "Item deleted successfully!",
+      "title": "Confirm Deletion",
+      "message": "Are you sure you want to delete this item? This action cannot be undone."
+    }
+  },
+  "forms": {
+    "title": "Forms",
+    "submitSuccess": "Form submitted successfully!"
+  },
+  "toastNotifications": {
+    "title": "Toast Notifications",
+    "success": "Show Success",
+    "error": "Show Error",
+    "warning": "Show Warning",
+    "info": "Show Info",
+    "messages": {
+      "success": "Operation completed successfully!",
+      "error": "An error occurred during the operation.",
+      "warning": "Warning: this action requires confirmation.",
+      "info": "Information: new feature available."
+    }
+  },
+  "formControls": {
+    "title": "Form Controls",
+    "inputBase": {
+      "label": "Base Input",
+      "placeholder": "Enter text...",
+      "helperText": "This is a helper text.",
+      "validationError": "Minimum 3 characters required"
+    },
+    "selectBase": {
+      "label": "Base Select",
+      "placeholder": "Select an option",
+      "options": {
+        "option1": "Option 1",
+        "option2": "Option 2",
+        "option3": "Option 3"
+      }
+    }
+  }
+}

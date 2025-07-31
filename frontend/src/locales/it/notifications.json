@@ -1,0 +1,12 @@
+{
+  "newFeature": {
+    "title": "Nuova Funzionalità!",
+    "description": "Dai un'occhiata alla nuova vista calendario per gli eventi.",
+    "time": "5m fa"
+  },
+  "subscription": {
+    "title": "Abbonamento in scadenza",
+    "description": "Il tuo abbonamento scadrà tra 3 giorni.",
+    "time": "1h fa"
+  }
+}

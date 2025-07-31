@@ -1,0 +1,125 @@
+/* Modern Calendar Styles */
+.modern-calendar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.calendar-header .month-display {
+  display: flex;
+  align-items: center;
+}
+
+.calendar-header .month-display .month-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.calendar-header .month-display .year {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #999;
+  margin-left: 8px;
+}
+
+.calendar-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.calendar-controls button {
+  background: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.calendar-controls button:hover {
+  background-color: #f9f9f9;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  flex-grow: 1;
+}
+
+.calendar-day-header {
+  text-align: center;
+  padding: 12px 0;
+  font-weight: 500;
+  color: #666;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.calendar-cell {
+  border-right: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 8px;
+  min-height: 120px;
+  position: relative;
+}
+
+.calendar-cell:nth-child(7n) {
+  border-right: none;
+}
+
+.calendar-cell .day-number {
+  font-weight: 500;
+}
+
+.calendar-cell.other-month .day-number {
+  color: #ccc;
+}
+
+.calendar-cell.is-today .day-number {
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-item {
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 4px;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.event-deadline {
+  background-color: #f9a825; /* Yellow */
+}
+
+.event-event {
+  background-color: #42a5f5; /* Blue */
+}
+
+.event-booking {
+  background-color: #66bb6a; /* Green */
+}

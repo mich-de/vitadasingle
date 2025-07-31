@@ -1,0 +1,60 @@
+[
+  {
+    "id": "1",
+    "name": "Dr. Mario Rossi",
+    "type": "medico",
+    "specialization": "medico_di_base",
+    "phone": "+39 02 1234567",
+    "email": "dr.rossi@studio.it",
+    "address": "Via Garibaldi 45, Milano",
+    "notes": "Medico di famiglia, disponibile anche per visite urgenti",
+    "emergency": false
+  },
+  {
+    "id": "2",
+    "name": "Studio Legale Bianchi",
+    "type": "avvocato",
+    "specialization": "diritto_immobiliare",
+    "phone": "+39 02 7654321",
+    "email": "info@studiolegalebianchi.it",
+    "address": "Corso Buenos Aires 12, Milano",
+    "notes": "Specializzati in questioni immobiliari e contratti",
+    "emergency": false
+  },
+  {
+    "id": "3",
+    "name": "Emergenze",
+    "type": "emergenza",
+    "phone": "112",
+    "notes": "Numero unico europeo per le emergenze",
+    "emergency": true
+  },
+  {
+    "id": "4",
+    "name": "Marco Verdi",
+    "type": "commercialista",
+    "phone": "+39 02 9876543",
+    "email": "marco.verdi@studio.com",
+    "address": "Via Dante 78, Milano",
+    "notes": "Commercialista per dichiarazione redditi e consulenza fiscale",
+    "emergency": false
+  },
+  {
+    "id": "5",
+    "name": "Assicurazioni Sicura",
+    "type": "assicurazione",
+    "phone": "+39 02 5555555",
+    "email": "servizio.clienti@sicura.it",
+    "notes": "Compagnia assicurativa per auto e casa",
+    "emergency": false
+  },
+  {
+    "id": "6",
+    "name": "Idraulico Giuseppe",
+    "type": "tecnico",
+    "specialization": "idraulica",
+    "phone": "+39 333 1234567",
+    "notes": "Idraulico di fiducia, disponibile anche per emergenze",
+    "emergency": false
+  }
+]

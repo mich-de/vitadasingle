@@ -1,0 +1,26 @@
+{
+  "title": "Il Mio Profilo",
+  "subtitle": "Gestisci le tue informazioni personali",
+  "name": "Nome",
+  "namePlaceholder": "Inserisci il tuo nome completo",
+  "email": "Email",
+  "emailPlaceholder": "Inserisci il tuo indirizzo email",
+  "phone": "Telefono",
+  "phonePlaceholder": "Inserisci il tuo numero di telefono",
+  "address": "Indirizzo",
+  "addressPlaceholder": "Inserisci il tuo indirizzo",
+  "bio": "Bio",
+  "bioPlaceholder": "Parlaci di te...",
+  "dataInfoTitle": "Informazioni Dati",
+  "dataInfoText": "Le tue informazioni personali sono salvate in modo sicuro nel browser. Puoi modificare questi dati in qualsiasi momento e le modifiche saranno immediatamente visibili in tutta l'applicazione.",
+  "infoBox": {
+    "title": "ℹ️ Informazioni sui Dati",
+    "message": "Le tue informazioni personali vengono salvate in modo sicuro nel browser. Puoi modificare questi dati in qualsiasi momento e le modifiche saranno immediatamente visibili in tutta l'applicazione."
+  },
+  "updatePersonalInformation": "Aggiorna le tue informazioni personali",
+  "resetConfirm": "Sei sicuro di voler ripristinare il profilo ai valori predefiniti?",
+  "emailFormatError": "Formato email non valido",
+  "phoneFormatError": "Formato telefono non valido",
+  "bioLengthError": "La bio non può superare i 500 caratteri",
+  "unsavedChanges": "⚠️ Hai delle modifiche non salvate"
+}

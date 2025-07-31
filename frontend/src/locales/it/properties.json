@@ -1,0 +1,50 @@
+{
+  "title": "Proprietà",
+  "addNew": "Aggiungi Nuova Proprietà",
+  "dataSource": "Dati caricati da: <code>/data/proprieta.json</code>",
+  "summary": {
+    "title": "Riepilogo Proprietà",
+    "totalProperties": "Totale Proprietà",
+    "residential": "Residenziali",
+    "commercial": "Commerciali",
+    "totalValue": "Valore Totale"
+  },
+  "table": {
+    "property": "Proprietà",
+    "type": "Tipo",
+    "currentValue": "Valore Attuale",
+    "actions": "Azioni"
+  },
+  "type": {
+    "residential": "Residenziale",
+    "commercial": "Commerciale",
+    "rental": "In Affitto",
+    "villa": "Villa",
+    "chalet": "Chalet",
+    "unknown": "Sconosciuto"
+  },
+  "deleteConfirmTitle": "Elimina Proprietà",
+  "deleteConfirmMessage": "Sei sicuro di voler eliminare questa proprietà? Questa azione non può essere annullata.",
+  "form": {
+    "addTitle": "Aggiungi Nuova Proprietà",
+    "editTitle": "Modifica Proprietà",
+    "name": "Nome",
+    "address": "Indirizzo",
+    "type": "Tipo",
+    "purchaseDate": "Data di Acquisto",
+    "purchasePrice": "Prezzo di Acquisto",
+    "currentValue": "Valore Attuale",
+    "notes": "Note",
+    "save": "Salva Proprietà"
+  },
+  "deleteModal": {
+    "title": "Elimina {{name}}",
+    "message": "Sei sicuro di voler eliminare questa proprietà? Questa azione non può essere annullata."
+  },
+  "errors": {
+    "load": "Impossibile caricare le proprietà.",
+    "create": "Si è verificato un errore durante la creazione della proprietà.",
+    "update": "Si è verificato un errore durante l'aggiornamento della proprietà.",
+    "delete": "Impossibile eliminare la proprietà."
+  }
+}

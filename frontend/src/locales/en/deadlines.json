@@ -1,0 +1,48 @@
+{
+  "title": "Deadlines",
+  "addNew": "Add New Deadline",
+  "dataSource": "📅 Data loaded from: <code>/data/scadenze.json</code>",
+  "summary": {
+    "title": "Deadlines Summary",
+    "totalDeadlines": "Total Deadlines",
+    "completed": "Completed",
+    "pending": "Pending",
+    "overdueCount": "Overdue"
+  },
+  "table": {
+    "status": "Status",
+    "title": "Title",
+    "dueDate": "Due Date",
+    "remainingTime": "Remaining Time",
+    "actions": "Actions"
+  },
+  "overdue": "Overdue",
+  "days": "days",
+  "category": {
+    "personal": "Personal",
+    "work": "Work",
+    "finance": "Finance",
+    "health": "Health",
+    "home": "Home",
+    "other": "Other",
+    "taxes": "Taxes",
+    "vehicles": "Vehicles"
+  },
+  "deleteConfirmTitle": "Delete Deadline",
+  "deleteConfirmMessage": "Are you sure you want to delete this deadline? This action cannot be undone.",
+  "delete": {
+    "title": "Delete Deadline",
+    "message": "Are you sure you want to delete this deadline? This action cannot be undone."
+  },
+  "deleteModal": {
+    "title": "Delete {{title}}",
+    "message": "Are you sure you want to delete this deadline? This action cannot be undone."
+  },
+  "errors": {
+    "load": "Could not load deadlines.",
+    "create": "An error occurred while creating the deadline.",
+    "update": "An error occurred while updating the deadline.",
+    "delete": "Could not delete the deadline.",
+    "toggle": "An error occurred while updating the deadline status."
+  }
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "name": "Allenamento Forza Petto",
+    "type": "strength",
+    "duration": 60,
+    "intensity": "high",
+    "calories": 400,
+    "date": "2025-06-25",
+    "exercises": [
+      "Panca piana",
+      "Croci manubri",
+      "Spinte manubri",
+      "Push-up"
+    ],
+    "notes": "Ottimo allenamento, aumentato il carico sulla panca. (updated) (updated)"
+  },
+  {
+    "id": "2",
+    "name": "Corsa Mattutina al Parco",
+    "type": "cardio",
+    "duration": 45,
+    "intensity": "moderate",
+    "calories": 350,
+    "date": "2025-06-26",
+    "exercises": [
+      "Corsa continua",
+      "Allunghi"
+    ],
+    "notes": "Bel tempo, percorso abituale."
+  },
+  {
+    "id": "3",
+    "name": "Sessione Yoga Rilassante",
+    "type": "flexibility",
+    "duration": 75,
+    "intensity": "low",
+    "calories": 150,
+    "date": "2025-06-27",
+    "exercises": [
+      "Saluto al sole",
+      "Posizione del loto",
+      "Stretching"
+    ],
+    "notes": "Molto rilassante, migliorata la flessibilità delle gambe."
+  }
+]

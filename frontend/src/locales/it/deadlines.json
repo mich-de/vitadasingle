@@ -1,0 +1,48 @@
+{
+  "title": "Scadenze",
+  "addNew": "Aggiungi Nuova Scadenza",
+  "dataSource": "📅 Dati caricati da: <code>/data/scadenze.json</code>",
+  "summary": {
+    "title": "Riepilogo Scadenze",
+    "totalDeadlines": "Totale Scadenze",
+    "completed": "Completate",
+    "pending": "In Attesa",
+    "overdueCount": "Scadute"
+  },
+  "table": {
+    "status": "Stato",
+    "title": "Titolo",
+    "dueDate": "Data Scadenza",
+    "remainingTime": "Tempo Rimanente",
+    "actions": "Azioni"
+  },
+  "overdue": "Scaduta",
+  "days": "giorni",
+  "category": {
+    "personal": "Personale",
+    "work": "Lavoro",
+    "finance": "Finanza",
+    "health": "Salute",
+    "home": "Casa",
+    "other": "Altro",
+    "taxes": "Tasse",
+    "vehicles": "Veicoli"
+  },
+  "deleteConfirmTitle": "Elimina Scadenza",
+  "deleteConfirmMessage": "Sei sicuro di voler eliminare questa scadenza? Questa azione non può essere annullata.",
+  "delete": {
+    "title": "Elimina Scadenza",
+    "message": "Sei sicuro di voler eliminare questa scadenza? Questa azione non può essere annullata."
+  },
+  "deleteModal": {
+    "title": "Elimina {{title}}",
+    "message": "Sei sicuro di voler eliminare questa scadenza? Questa azione non può essere annullata."
+  },
+  "errors": {
+    "load": "Impossibile caricare le scadenze.",
+    "create": "Si è verificato un errore durante la creazione della scadenza.",
+    "update": "Si è verificato un errore durante l'aggiornamento della scadenza.",
+    "delete": "Impossibile eliminare la scadenza.",
+    "toggle": "Si è verificato un errore durante l'aggiornamento dello stato della scadenza."
+  }
+}

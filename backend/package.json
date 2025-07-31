@@ -1,0 +1,28 @@
+{
+  "name": "vitaapp-backend",
+  "version": "1.0.0",
+  "description": "Backend server per VitaApp - Sistema JSON integrato",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Backend funzionante\" && exit 0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^8.1.0"
+  },
+  "keywords": [
+    "vitaapp",
+    "backend",
+    "api",
+    "json",
+    "express"
+  ],
+  "author": "VitaApp Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

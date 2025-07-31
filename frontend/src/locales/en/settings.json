@@ -1,0 +1,43 @@
+{
+  "title": "Settings",
+  "subtitle": "Manage your application preferences",
+  "save": "Save Changes",
+  "language": "Language",
+  "languageDesc": "Select the user interface language.",
+  "theme": "Theme",
+  "themeDesc": "Customize the appearance of the application.",
+  "light": "Light",
+  "dark": "Dark",
+  "notifications": "Notifications",
+  "notificationsDesc": "Configure notification preferences.",
+  "notificationsTitle": "Notifications",
+  "emailNotifications": "Email Notifications",
+  "pushNotifications": "Push Notifications",
+  "deadlineReminders": "Deadline Reminders",
+  "expenseAlerts": "Expense Alerts",
+  "bookingUpdates": "Booking Updates",
+  "expenseReminders": "Expense Reminders",
+  "bookingNotifications": "Booking Notifications",
+  "languages": {
+    "it": "Italian",
+    "en": "English"
+  },
+  "notificationMessages": {
+    "newFeature": {
+      "title": "New Feature!",
+      "description": "Check out the new calendar view for events.",
+      "time": "5m ago"
+    },
+    "subscription": {
+      "title": "Subscription expiring",
+      "description": "Your subscription will expire in 3 days.",
+      "time": "1h ago"
+    }
+  },
+  "demoUser": {
+    "name": "Demo User"
+  },
+  "editProfile": "Edit Profile",
+  "privacy": "Privacy",
+  "support": "Support"
+}

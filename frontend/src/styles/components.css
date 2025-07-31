@@ -1,0 +1,133 @@
+/* Glass morphism utilities */
+.glass {
+  background-color: rgba(255, 255, 255, 0.85); /* Further increased opacity for better contrast */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.dark .glass {
+  background-color: rgba(31, 41, 55, 0.1);
+  border: 1px solid rgba(75, 85, 99, 0.2);
+}
+
+.glass-light {
+  background-color: rgba(255, 255, 255, 0.9); /* Further increased opacity for better contrast */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.dark .glass-light {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+  background-color: rgba(17, 24, 39, 0.5); /* Increased opacity for better contrast */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(55, 65, 81, 0.4);
+}
+
+.dark .glass-dark {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(75, 85, 99, 0.3);
+}
+
+/* Gradient text utilities */
+.text-gradient-primary {
+  background: linear-gradient(to right, #2563eb, #8b5cf6);
+  -webkit-background-clip: text;
+  color: #2563eb; /* Fallback color for light theme */
+  background-clip: text;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dark .text-gradient-primary {
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.text-gradient-secondary {
+  background: linear-gradient(to right, #0f172a, #0d9488);
+  -webkit-background-clip: text;
+  color: #0f172a; /* Fallback color for light theme */
+  background-clip: text;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dark .text-gradient-secondary {
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.text-gradient-accent {
+  background: linear-gradient(to right, #1e293b, #ec4899);
+  -webkit-background-clip: text;
+  color: #1e293b; /* Fallback color for light theme */
+  background-clip: text;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dark .text-gradient-accent {
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Dark theme specific gradient text adjustments */
+.dark .text-gradient-primary {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Even stronger shadow for dark mode */
+}
+
+.dark .text-gradient-secondary {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Even stronger shadow for dark mode */
+}
+
+.dark .text-gradient-accent {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Even stronger shadow for dark mode */
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(to right, #2563eb, #8b5cf6);
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: linear-gradient(to right, #cbd5e1, #0d9488);
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(13, 148, 136, 0.25);
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 20px 25px -5px rgba(13, 148, 136, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  border: 2px solid #2563eb;
+  color: #2563eb;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  background-color: #2563eb;
+  color: white;
+}

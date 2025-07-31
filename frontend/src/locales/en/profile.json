@@ -1,0 +1,26 @@
+{
+  "title": "My Profile",
+  "subtitle": "Manage your personal information",
+  "name": "Name",
+  "namePlaceholder": "Enter your full name",
+  "email": "Email",
+  "emailPlaceholder": "Enter your email address",
+  "phone": "Phone",
+  "phonePlaceholder": "Enter your phone number",
+  "address": "Address",
+  "addressPlaceholder": "Enter your address",
+  "bio": "Bio",
+  "bioPlaceholder": "Tell us about yourself...",
+  "dataInfoTitle": "Data Information",
+  "dataInfoText": "Your personal information is securely saved in the browser. You can modify this data at any time and the changes will be immediately visible throughout the application.",
+  "infoBox": {
+    "title": "ℹ️ Data Information",
+    "message": "Your personal information is securely saved in the browser. You can modify this data at any time and the changes will be immediately visible throughout the application."
+  },
+  "updatePersonalInformation": "Update your personal information",
+  "resetConfirm": "Are you sure you want to reset the profile to default values?",
+  "emailFormatError": "Invalid email format",
+  "phoneFormatError": "Invalid phone format",
+  "bioLengthError": "Bio cannot exceed 500 characters",
+  "unsavedChanges": "⚠️ You have unsaved changes"
+}

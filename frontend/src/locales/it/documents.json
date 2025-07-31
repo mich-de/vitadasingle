@@ -1,0 +1,65 @@
+{
+  "loadError": "Errore durante il caricamento dei documenti",
+  "deleteError": "Errore durante l'eliminazione del documento",
+  "loading": "Caricamento documenti...",
+  "title": "Documenti",
+  "addNew": "Aggiungi Nuovo Documento",
+  "dataSource": "🗄️ Dati caricati da: <code>/data/documenti.json</code>",
+  "storageUsage": "Utilizzo Archiviazione",
+  "searchPlaceholder": "Cerca documenti...",
+  "filterByCategory": "Filtra per categoria",
+  "sortBy": "Ordina per",
+  "sort": {
+    "date": "Data",
+    "name": "Nome",
+    "size": "Dimensione"
+  },
+  "table": {
+    "name": "Nome",
+    "type": "Tipo",
+    "category": "Categoria",
+    "dateModified": "Data Modifica",
+    "size": "Dimensione",
+    "actions": "Azioni"
+  },
+  "actions": {
+    "download": "Scarica",
+    "share": "Condividi",
+    "edit": "Modifica",
+    "delete": "Elimina"
+  },
+  "noDocuments": "Nessun documento trovato",
+  "noDocumentsMessage": "Aggiungi il tuo primo documento per iniziare.",
+  "uploadFirst": "Carica il Primo Documento",
+  "summary": {
+    "title": "Riepilogo Documenti",
+    "totalDocuments": "Totale Documenti",
+    "totalSize": "Dimensione Totale",
+    "personal": "Personali",
+    "financial": "Finanziari",
+    "legal": "Legali",
+    "medical": "Medici",
+    "contracts": "Contratti",
+    "taxes": "Tasse",
+    "insurance": "Assicurazioni",
+    "other": "Altro"
+  },
+  "deleteTitle": "Elimina Documento",
+  "deleteMessage": "Sei sicuro di voler eliminare questo documento?",
+  "bytes": "Bytes",
+  "kb": "KB",
+  "mb": "MB",
+  "gb": "GB",
+  "fileSize": {
+    "bytes": "Bytes",
+    "kb": "KB",
+    "mb": "MB",
+    "gb": "GB"
+  },
+  "errors": {
+    "load": "Impossibile caricare i documenti.",
+    "create": "Si è verificato un errore durante la creazione del documento.",
+    "update": "Si è verificato un errore durante l'aggiornamento del documento.",
+    "delete": "Impossibile eliminare il documento."
+  }
+}

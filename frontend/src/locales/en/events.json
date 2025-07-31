@@ -1,0 +1,42 @@
+{
+  "title": "Events",
+  "dataSource": "🎉 Data loaded from",
+  "dataSourcePath": "<code>/data/eventi.json</code>",
+  "loadError": "Unable to load events from JSON database",
+  "confirmDelete": "Are you sure you want to delete this event?",
+  "deleteError": "Unable to delete event",
+  "addNew": "Add new event",
+  "loading": "Loading events from JSON database...",
+  "filters": {
+    "all": "All",
+    "today": "Today",
+    "week": "This week",
+    "work": "Work",
+    "health": "Health",
+    "social": "Social",
+    "travel": "Travel",
+    "personal": "Personal",
+    "other": "Other"
+  },
+  "dates": {
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "thisWeek": "This week"
+  },
+  "upcoming": "Upcoming",
+  "noEvents": "No events found",
+  "noEventsForFilter": "No events for the selected filter.",
+  "addFirst": "Add your first event.",
+  "add": "Add event",
+  "calendarViewNotImplemented": "Calendar view is not yet implemented.",
+  "upcomingEvents": "Upcoming Events",
+  "noEventsFound": "No events found",
+  "addFirstEvent": "Add your first event.",
+  "addEvent": "Add event",
+  "errors": {
+    "load": "Could not load events.",
+    "create": "An error occurred while creating the event.",
+    "update": "An error occurred while updating the event.",
+    "delete": "Could not delete the event."
+  }
+}

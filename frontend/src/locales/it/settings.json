@@ -1,0 +1,43 @@
+{
+  "title": "Impostazioni",
+  "subtitle": "Gestisci le preferenze dell'applicazione",
+  "save": "Salva Modifiche",
+  "language": "Lingua",
+  "languageDesc": "Seleziona la lingua dell'interfaccia utente.",
+  "theme": "Tema",
+  "themeDesc": "Personalizza l'aspetto dell'applicazione.",
+  "light": "Chiaro",
+  "dark": "Scuro",
+  "notifications": "Notifiche",
+  "notificationsDesc": "Configura le preferenze di notifica.",
+  "notificationsTitle": "Notifiche",
+  "emailNotifications": "Notifiche Email",
+  "pushNotifications": "Notifiche Push",
+  "deadlineReminders": "Promemoria Scadenze",
+  "expenseAlerts": "Avvisi Spese",
+  "bookingUpdates": "Aggiornamenti Prenotazioni",
+  "expenseReminders": "Promemoria Spese",
+  "bookingNotifications": "Notifiche Prenotazioni",
+  "languages": {
+    "it": "Italiano",
+    "en": "Inglese"
+  },
+  "notificationMessages": {
+    "newFeature": {
+      "title": "Nuova Funzionalità!",
+      "description": "Dai un'occhiata alla nuova vista calendario per gli eventi.",
+      "time": "5m fa"
+    },
+    "subscription": {
+      "title": "Abbonamento in scadenza",
+      "description": "Il tuo abbonamento scadrà tra 3 giorni.",
+      "time": "1h fa"
+    }
+  },
+  "demoUser": {
+    "name": "Utente Demo"
+  },
+  "editProfile": "Modifica Profilo",
+  "privacy": "Privacy",
+  "support": "Supporto"
+}

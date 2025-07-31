@@ -1,0 +1,32 @@
+{
+  "title": "Calendar",
+  "allEvents": "All events",
+  "shared": "Shared",
+  "public": "Public",
+  "archived": "Archived",
+  "searchPlaceholder": "Search",
+  "today": "Today",
+  "monthView": "Month View",
+  "weekView": "Week View",
+  "dayView": "Day View",
+  "addEvent": "Add event",
+  "errorLoading": "Unable to load: ",
+  "loading": "Loading calendar...",
+  "error": "Error loading calendar data",
+  "day": "Day",
+  "weekday": "Weekday",
+  "month": "Month",
+  "year": "Year",
+  "more": "more...",
+  "locale": "en-US",
+  "days": {
+    "mon": "Mon",
+    "tue": "Tue",
+    "wed": "Wed",
+    "thu": "Thu",
+    "fri": "Fri",
+    "sat": "Sat",
+    "sun": "Sun"
+  },
+  "dataSource": "📅 Data loaded from:<br><code>/data/scadenze.json</code><br><code>/data/eventi.json</code><br><code>/data/bookings.json</code>"
+}

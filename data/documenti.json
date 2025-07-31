@@ -1,0 +1,162 @@
+[
+  {
+    "id": "1",
+    "name": "Contratto di affitto",
+    "type": "pdf",
+    "size": 2456789,
+    "category": "legal",
+    "dateModified": "2025-06-20",
+    "dateCreated": "2025-01-15",
+    "tags": [
+      "contratto",
+      "affitto",
+      "milano"
+    ],
+    "shared": false,
+    "file": "contratto_affitto.pdf"
+  },
+  {
+    "id": "2",
+    "name": "Dichiarazione dei redditi 2024",
+    "type": "pdf",
+    "size": 1789234,
+    "category": "taxes",
+    "dateModified": "2025-06-18",
+    "dateCreated": "2025-03-30",
+    "tags": [
+      "tasse",
+      "2024",
+      "redditi"
+    ],
+    "shared": false,
+    "file": "dichiarazione_redditi_2024.pdf"
+  },
+  {
+    "id": "3",
+    "name": "Bilancio familiare",
+    "type": "xlsx",
+    "size": 456123,
+    "category": "financial",
+    "dateModified": "2025-06-25",
+    "dateCreated": "2025-01-01",
+    "tags": [
+      "bilancio",
+      "spese",
+      "2025"
+    ],
+    "shared": true,
+    "file": "bilancio_familiare.xlsx"
+  },
+  {
+    "id": "4",
+    "name": "Assicurazione auto",
+    "type": "pdf",
+    "size": 892345,
+    "category": "insurance",
+    "dateModified": "2025-06-10",
+    "dateCreated": "2025-02-15",
+    "tags": [
+      "assicurazione",
+      "auto",
+      "polizza"
+    ],
+    "shared": false,
+    "file": "assicurazione_auto.pdf"
+  },
+  {
+    "id": "5",
+    "name": "Esami del sangue",
+    "type": "pdf",
+    "size": 567890,
+    "category": "medical",
+    "dateModified": "2025-06-15",
+    "dateCreated": "2025-06-15",
+    "tags": [
+      "esami",
+      "sangue",
+      "salute"
+    ],
+    "shared": false,
+    "file": "esami_sangue_giugno.pdf"
+  },
+  {
+    "id": "6",
+    "name": "Foto documenti",
+    "type": "jpg",
+    "size": 3456789,
+    "category": "personal",
+    "dateModified": "2025-06-12",
+    "dateCreated": "2025-06-12",
+    "tags": [
+      "identità",
+      "documenti",
+      "backup"
+    ],
+    "shared": false,
+    "file": "foto_documenti.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Contratto di lavoro",
+    "type": "pdf",
+    "size": 1234567,
+    "category": "contracts",
+    "dateModified": "2025-05-20",
+    "dateCreated": "2025-05-20",
+    "tags": [
+      "lavoro",
+      "contratto",
+      "vita-app"
+    ],
+    "shared": false,
+    "file": "contratto_lavoro.pdf"
+  },
+  {
+    "id": "8",
+    "name": "Fatture utenze Q1",
+    "type": "xlsx",
+    "size": 234567,
+    "category": "financial",
+    "dateModified": "2025-04-01",
+    "dateCreated": "2025-04-01",
+    "tags": [
+      "fatture",
+      "utenze",
+      "q1"
+    ],
+    "shared": false,
+    "file": "fatture_utenze_q1.xlsx"
+  },
+  {
+    "id": "9",
+    "name": "Note progetto casa",
+    "type": "txt",
+    "size": 12345,
+    "category": "personal",
+    "dateModified": "2025-06-22",
+    "dateCreated": "2025-06-01",
+    "tags": [
+      "note",
+      "progetto",
+      "casa"
+    ],
+    "shared": false,
+    "file": "note_progetto_casa.txt"
+  },
+  {
+    "id": "10",
+    "name": "Ricevute mediche",
+    "type": "pdf",
+    "size": 789123,
+    "category": "medical",
+    "dateModified": "2025-06-08",
+    "dateCreated": "2025-06-08",
+    "tags": [
+      "ricevute",
+      "mediche",
+      "rimborsi"
+    ],
+    "shared": false,
+    "file": "ricevute_mediche_2025.pdf"
+  }
+]
