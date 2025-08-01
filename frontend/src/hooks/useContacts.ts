@@ -11,7 +11,7 @@ export const useContacts = () => {
     try {
       setLoading(true);
       setError(null);
-      const data = await apiService.getContatti();
+      const data = await apiService.getContacts();
       setContacts(data);
     } catch (error) {
       console.error('Error loading contacts:', error);
@@ -27,7 +27,7 @@ export const useContacts = () => {
 
   const createContact = async (newContact: Contact) => {
     try {
-      const createdContact = await apiService.createContatto(newContact);
+      const createdContact = await apiService.createContact(newContact);
       setContacts(prev => [...prev, createdContact]);
     } catch (error) {
       console.error('Error creating contact:', error);
@@ -37,7 +37,7 @@ export const useContacts = () => {
 
   const updateContact = async (id: string, updatedContact: Contact) => {
     try {
-      await apiService.updateContatto(id, updatedContact);
+      await apiService.updateContact(id, updatedContact);
       setContacts(prev => prev.map(c => (c.id === id ? updatedContact : c)));
     } catch (error) {
       console.error('Error updating contact:', error);
@@ -47,7 +47,7 @@ export const useContacts = () => {
 
   const deleteContact = async (id: string) => {
     try {
-      await apiService.deleteContatto(id);
+      await apiService.deleteContact(id);
       setContacts(prev => prev.filter(c => c.id !== id));
     } catch (error) {
       console.error('Error deleting contact:', error);

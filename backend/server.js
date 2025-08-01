@@ -16,13 +16,13 @@ app.use('/api/todo', todoRoutes);
 
 const DATA_DIR = path.join(__dirname, '..', 'data');
 const FILES = {
-  scadenze: path.join(DATA_DIR, 'scadenze.json'),
-  proprieta: path.join(DATA_DIR, 'proprieta.json'),
-  documenti: path.join(DATA_DIR, 'documenti.json'),
-  spese: path.join(DATA_DIR, 'spese.json'),
-  eventi: path.join(DATA_DIR, 'eventi.json'),
-  contatti: path.join(DATA_DIR, 'contatti.json'),
-  veicoli: path.join(DATA_DIR, 'veicoli.json'),
+  deadlines: path.join(DATA_DIR, 'deadlines.json'),
+  properties: path.join(DATA_DIR, 'properties.json'),
+  documents: path.join(DATA_DIR, 'documents.json'),
+  expenses: path.join(DATA_DIR, 'expenses.json'),
+  events: path.join(DATA_DIR, 'events.json'),
+  contacts: path.join(DATA_DIR, 'contacts.json'),
+  vehicles: path.join(DATA_DIR, 'vehicles.json'),
   bookings: path.join(DATA_DIR, 'bookings.json'),
   workouts: path.join(DATA_DIR, 'workouts.json'),
   profile: path.join(__dirname, 'profile.json')
@@ -52,41 +52,39 @@ function writeJSONFile(filePath, data) {
 }
 
 // SCADENZE API
-app.get('/api/scadenze', (req, res) => {
-  const scadenze = readJSONFile(FILES.scadenze);
-  res.json(scadenze);
+app.get('/api/deadlines', (req, res) => {
+  const deadlines = readJSONFile(FILES.deadlines);
+  res.json(deadlines);
 });
 
-app.post('/api/scadenze', (req, res) => {
-  const scadenze = readJSONFile(FILES.scadenze);
+app.post('/api/deadlines', (req, res) => {
+  const deadlines = readJSONFile(FILES.deadlines);
   const newItem = { ...req.body, id: Date.now().toString() };
-  scadenze.push(newItem);
-  if (writeJSONFile(FILES.scadenze, scadenze)) {
+  deadlines.push(newItem);
+  if (writeJSONFile(FILES.deadlines, deadlines)) {
     res.status(201).json(newItem);
   } else {
     res.status(500).json({ error: 'Errore salvataggio scadenza' });
   }
 });
 
-app.put('/api/scadenze/:id', (req, res) => {
-  const scadenze = readJSONFile(FILES.scadenze);
-  const idx = scadenze.findIndex(item => item.id === req.params.id);
+app.put('/api/deadlines/:id', (req, res) => {
+  const deadlines = readJSONFile(FILES.deadlines);
+  const idx = deadlines.findIndex(item => item.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: 'Scadenza non trovata' });
-  scadenze[idx] = { ...scadenze[idx], ...req.body };
-  if (writeJSONFile(FILES.scadenze, scadenze)) {
-    res.json(scadenze[idx]);
-  } else {
-    res.status(500).json({ error: 'Errore aggiornamento scadenza' });
+  deadlines[idx] = { ...deadlines[idx], ...req.body };
+  if (writeJSONFile(FILES.deadlines, deadlines)) {
+    res.json(deadlines[idx]);
   }
 });
 
-app.delete('/api/scadenze/:id', (req, res) => {
-  let scadenze = readJSONFile(FILES.scadenze);
-  const idx = scadenze.findIndex(item => item.id === req.params.id);
+app.delete('/api/deadlines/:id', (req, res) => {
+  let deadlines = readJSONFile(FILES.deadlines);
+  const idx = deadlines.findIndex(item => item.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: 'Scadenza non trovata' });
-  const deleted = scadenze[idx];
-  scadenze = scadenze.filter(item => item.id !== req.params.id);
-  if (writeJSONFile(FILES.scadenze, scadenze)) {
+  const deleted = deadlines[idx];
+  deadlines = deadlines.filter(item => item.id !== req.params.id);
+  if (writeJSONFile(FILES.deadlines, deadlines)) {
     res.json(deleted);
   } else {
     res.status(500).json({ error: 'Errore eliminazione scadenza' });
@@ -94,41 +92,41 @@ app.delete('/api/scadenze/:id', (req, res) => {
 });
 
 // PROPRIETÀ API
-app.get('/api/proprieta', (req, res) => {
-  const proprieta = readJSONFile(FILES.proprieta);
-  res.json(proprieta);
+app.get('/api/properties', (req, res) => {
+  const properties = readJSONFile(FILES.properties);
+  res.json(properties);
 });
 
-app.post('/api/proprieta', (req, res) => {
-  const proprieta = readJSONFile(FILES.proprieta);
+app.post('/api/properties', (req, res) => {
+  const properties = readJSONFile(FILES.properties);
   const newItem = { ...req.body, id: Date.now().toString() };
-  proprieta.push(newItem);
-  if (writeJSONFile(FILES.proprieta, proprieta)) {
+  properties.push(newItem);
+  if (writeJSONFile(FILES.properties, properties)) {
     res.status(201).json(newItem);
   } else {
     res.status(500).json({ error: 'Errore salvataggio proprietà' });
   }
 });
 
-app.put('/api/proprieta/:id', (req, res) => {
-  const proprieta = readJSONFile(FILES.proprieta);
-  const idx = proprieta.findIndex(item => item.id === req.params.id);
+app.put('/api/properties/:id', (req, res) => {
+  const properties = readJSONFile(FILES.properties);
+  const idx = properties.findIndex(item => item.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: 'Proprietà non trovata' });
-  proprieta[idx] = { ...proprieta[idx], ...req.body };
-  if (writeJSONFile(FILES.proprieta, proprieta)) {
-    res.json(proprieta[idx]);
+  properties[idx] = { ...properties[idx], ...req.body };
+  if (writeJSONFile(FILES.properties, properties)) {
+    res.json(properties[idx]);
   } else {
     res.status(500).json({ error: 'Errore aggiornamento proprietà' });
   }
 });
 
-app.delete('/api/proprieta/:id', (req, res) => {
-  let proprieta = readJSONFile(FILES.proprieta);
-  const idx = proprieta.findIndex(item => item.id === req.params.id);
+app.delete('/api/properties/:id', (req, res) => {
+  let properties = readJSONFile(FILES.properties);
+  const idx = properties.findIndex(item => item.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: 'Proprietà non trovata' });
-  const deleted = proprieta[idx];
-  proprieta = proprieta.filter(item => item.id !== req.params.id);
-  if (writeJSONFile(FILES.proprieta, proprieta)) {
+  const deleted = properties[idx];
+  properties = properties.filter(item => item.id !== req.params.id);
+  if (writeJSONFile(FILES.properties, properties)) {
     res.json(deleted);
   } else {
     res.status(500).json({ error: 'Errore eliminazione proprietà' });
@@ -136,147 +134,83 @@ app.delete('/api/proprieta/:id', (req, res) => {
 });
 
 // DOCUMENTI API
-app.get('/api/documenti', (req, res) => {
-  const documenti = readJSONFile(FILES.documenti);
-  res.json(documenti);
+app.get('/api/documents', (req, res) => {
+  const documents = readJSONFile(FILES.documents);
+  res.json(documents);
 });
 
-app.post('/api/documenti', (req, res) => {
-  const documenti = readJSONFile(FILES.documenti);
+app.post('/api/documents', (req, res) => {
+  const documents = readJSONFile(FILES.documents);
   const newItem = { ...req.body, id: Date.now().toString() };
-  documenti.push(newItem);
-  if (writeJSONFile(FILES.documenti, documenti)) {
+  documents.push(newItem);
+  if (writeJSONFile(FILES.documents, documents)) {
     res.status(201).json(newItem);
   } else {
     res.status(500).json({ error: 'Errore salvataggio documento' });
   }
 });
 
-app.put('/api/documenti/:id', (req, res) => {
-  const documenti = readJSONFile(FILES.documenti);
-  const idx = documenti.findIndex(item => item.id === req.params.id);
+app.put('/api/documents/:id', (req, res) => {
+  const documents = readJSONFile(FILES.documents);
+  const idx = documents.findIndex(item => item.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: 'Documento non trovato' });
-  documenti[idx] = { ...documenti[idx], ...req.body };
-  if (writeJSONFile(FILES.documenti, documenti)) {
-    res.json(documenti[idx]);
+  documents[idx] = { ...documents[idx], ...req.body };
+  if (writeJSONFile(FILES.documents, documents)) {
+    res.json(documents[idx]);
   } else {
     res.status(500).json({ error: 'Errore aggiornamento documento' });
   }
 });
 
-app.delete('/api/documenti/:id', (req, res) => {
-  let documenti = readJSONFile(FILES.documenti);
-  const idx = documenti.findIndex(item => item.id === req.params.id);
+app.delete('/api/documents/:id', (req, res) => {
+  let documents = readJSONFile(FILES.documents);
+  const idx = documents.findIndex(item => item.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: 'Documento non trovato' });
-  const deleted = documenti[idx];
-  documenti = documenti.filter(item => item.id !== req.params.id);
-  if (writeJSONFile(FILES.documenti, documenti)) {
+  const deleted = documents[idx];
+  documents = documents.filter(item => item.id !== req.params.id);
+  if (writeJSONFile(FILES.documents, documents)) {
     res.json(deleted);
   } else {
     res.status(500).json({ error: 'Errore eliminazione documento' });
   }
 });
 
-// CONTATTI API
-app.get('/api/contatti', (req, res) => {
-  const contatti = readJSONFile(FILES.contatti);
-  res.json(contatti);
-});
-
-app.delete('/api/contatti/:id', (req, res) => {
-  let contatti = readJSONFile(FILES.contatti);
-  const index = contatti.findIndex(c => c.id === req.params.id);
-  if (index === -1) {
-    return res.status(404).json({ message: 'Contatto non trovato' });
-  }
-  const deleted = contatti[index];
-  contatti = contatti.filter(item => item.id !== req.params.id);
-  if (writeJSONFile(FILES.contatti, contatti)) {
-    res.json(deleted);
-  } else {
-    res.status(500).json({ message: 'Errore eliminazione contatto' });
-  }
-});
-
-
-// VEICOLI API
-app.get('/api/veicoli', (req, res) => {
-  const veicoli = readJSONFile(FILES.veicoli);
-  res.json(veicoli);
-});
-
-app.post('/api/veicoli', (req, res) => {
-  const veicoli = readJSONFile(FILES.veicoli);
-  const newItem = { ...req.body, id: Date.now().toString() };
-  veicoli.push(newItem);
-  if (writeJSONFile(FILES.veicoli, veicoli)) {
-    res.status(201).json(newItem);
-  } else {
-    res.status(500).json({ error: 'Errore salvataggio veicolo' });
-  }
-});
-
-app.put('/api/veicoli/:id', (req, res) => {
-  const veicoli = readJSONFile(FILES.veicoli);
-  const idx = veicoli.findIndex(item => item.id === req.params.id);
-  if (idx === -1) return res.status(404).json({ error: 'Veicolo non trovato' });
-  veicoli[idx] = { ...veicoli[idx], ...req.body };
-  if (writeJSONFile(FILES.veicoli, veicoli)) {
-    res.json(veicoli[idx]);
-  } else {
-    res.status(500).json({ error: 'Errore aggiornamento veicolo' });
-  }
-});
-
-app.delete('/api/veicoli/:id', (req, res) => {
-  let veicoli = readJSONFile(FILES.veicoli);
-  const idx = veicoli.findIndex(item => item.id === req.params.id);
-  if (idx === -1) return res.status(404).json({ error: 'Veicolo non trovato' });
-  const deleted = veicoli[idx];
-  veicoli = veicoli.filter(item => item.id !== req.params.id);
-  if (writeJSONFile(FILES.veicoli, veicoli)) {
-    res.json(deleted);
-  } else {
-    res.status(500).json({ error: 'Errore eliminazione veicolo' });
-  }
-});
-
 // SPESE API
-app.get('/api/spese', (req, res) => {
-  const spese = readJSONFile(FILES.spese);
-  res.json(spese);
+app.get('/api/expenses', (req, res) => {
+  const expenses = readJSONFile(FILES.expenses);
+  res.json(expenses);
 });
 
-app.post('/api/spese', (req, res) => {
-  const spese = readJSONFile(FILES.spese);
+app.post('/api/expenses', (req, res) => {
+  const expenses = readJSONFile(FILES.expenses);
   const newItem = { ...req.body, id: Date.now().toString() };
-  spese.push(newItem);
-  if (writeJSONFile(FILES.spese, spese)) {
+  expenses.push(newItem);
+  if (writeJSONFile(FILES.expenses, expenses)) {
     res.status(201).json(newItem);
   } else {
     res.status(500).json({ error: 'Errore salvataggio spesa' });
   }
 });
 
-app.put('/api/spese/:id', (req, res) => {
-  const spese = readJSONFile(FILES.spese);
-  const idx = spese.findIndex(item => item.id === req.params.id);
+app.put('/api/expenses/:id', (req, res) => {
+  const expenses = readJSONFile(FILES.expenses);
+  const idx = expenses.findIndex(item => item.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: 'Spesa non trovata' });
-  spese[idx] = { ...spese[idx], ...req.body };
-  if (writeJSONFile(FILES.spese, spese)) {
-    res.json(spese[idx]);
+  expenses[idx] = { ...expenses[idx], ...req.body };
+  if (writeJSONFile(FILES.expenses, expenses)) {
+    res.json(expenses[idx]);
   } else {
     res.status(500).json({ error: 'Errore aggiornamento spesa' });
   }
 });
 
-app.delete('/api/spese/:id', (req, res) => {
-  let spese = readJSONFile(FILES.spese);
-  const idx = spese.findIndex(item => item.id === req.params.id);
+app.delete('/api/expenses/:id', (req, res) => {
+  let expenses = readJSONFile(FILES.expenses);
+  const idx = expenses.findIndex(item => item.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: 'Spesa non trovata' });
-  const deleted = spese[idx];
-  spese = spese.filter(item => item.id !== req.params.id);
-  if (writeJSONFile(FILES.spese, spese)) {
+  const deleted = expenses[idx];
+  expenses = expenses.filter(item => item.id !== req.params.id);
+  if (writeJSONFile(FILES.expenses, expenses)) {
     res.json(deleted);
   } else {
     res.status(500).json({ error: 'Errore eliminazione spesa' });
@@ -284,86 +218,91 @@ app.delete('/api/spese/:id', (req, res) => {
 });
 
 // EVENTI API
-app.get('/api/eventi', (req, res) => {
-  const eventi = readJSONFile(FILES.eventi);
-  res.json(eventi);
+app.get('/api/events', (req, res) => {
+  const events = readJSONFile(FILES.events).map(event => ({
+    ...event,
+    startDate: `${event.date}T${event.time}:00`,
+    attendees: event.attendees ? Array.from({ length: event.attendees }, (_, i) => `Partecipante ${i + 1}`) : []
+  }));
+  res.json(events);
 });
 
-app.post('/api/eventi', (req, res) => {
-  const eventi = readJSONFile(FILES.eventi);
+app.post('/api/events', (req, res) => {
+  const events = readJSONFile(FILES.events);
   const newItem = { ...req.body, id: Date.now().toString() };
-  eventi.push(newItem);
-  if (writeJSONFile(FILES.eventi, eventi)) {
+  events.push(newItem);
+  if (writeJSONFile(FILES.events, events)) {
     res.status(201).json(newItem);
   } else {
     res.status(500).json({ error: 'Errore salvataggio evento' });
   }
 });
 
-app.put('/api/eventi/:id', (req, res) => {
-  const eventi = readJSONFile(FILES.eventi);
-  const idx = eventi.findIndex(item => item.id === req.params.id);
+app.put('/api/events/:id', (req, res) => {
+  const events = readJSONFile(FILES.events);
+  const idx = events.findIndex(item => item.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: 'Evento non trovato' });
-  eventi[idx] = { ...eventi[idx], ...req.body };
-  if (writeJSONFile(FILES.eventi, eventi)) {
-    res.json(eventi[idx]);
+  events[idx] = { ...events[idx], ...req.body };
+  if (writeJSONFile(FILES.events, events)) {
+    res.json(events[idx]);
   } else {
     res.status(500).json({ error: 'Errore aggiornamento evento' });
   }
 });
 
-app.delete('/api/eventi/:id', (req, res) => {
-  let eventi = readJSONFile(FILES.eventi);
-  const idx = eventi.findIndex(item => item.id === req.params.id);
+app.delete('/api/events/:id', (req, res) => {
+  let events = readJSONFile(FILES.events);
+  const idx = events.findIndex(item => item.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: 'Evento non trovato' });
-  const deleted = eventi[idx];
-  eventi = eventi.filter(item => item.id !== req.params.id);
-  if (writeJSONFile(FILES.eventi, eventi)) {
+  const deleted = events[idx];
+  events = events.filter(item => item.id !== req.params.id);
+  if (writeJSONFile(FILES.events, events)) {
     res.json(deleted);
-  } else {
+  }
+  else {
     res.status(500).json({ error: 'Errore eliminazione evento' });
   }
 });
 
-// BOOKINGS API
-app.get('/api/bookings', (req, res) => {
-  const bookings = readJSONFile(FILES.bookings);
-  res.json(bookings);
+// VEICOLI API
+app.get('/api/vehicles', (req, res) => {
+  const vehicles = readJSONFile(FILES.vehicles);
+  res.json(vehicles);
 });
 
-app.post('/api/bookings', (req, res) => {
-  const bookings = readJSONFile(FILES.bookings);
+app.post('/api/vehicles', (req, res) => {
+  const vehicles = readJSONFile(FILES.vehicles);
   const newItem = { ...req.body, id: Date.now().toString() };
-  bookings.push(newItem);
-  if (writeJSONFile(FILES.bookings, bookings)) {
+  vehicles.push(newItem);
+  if (writeJSONFile(FILES.vehicles, vehicles)) {
     res.status(201).json(newItem);
   } else {
-    res.status(500).json({ error: 'Errore salvataggio booking' });
+    res.status(500).json({ error: 'Errore salvataggio veicolo' });
   }
 });
 
-app.put('/api/bookings/:id', (req, res) => {
-  const bookings = readJSONFile(FILES.bookings);
-  const idx = bookings.findIndex(item => item.id === req.params.id);
-  if (idx === -1) return res.status(404).json({ error: 'Booking non trovato' });
-  bookings[idx] = { ...bookings[idx], ...req.body };
-  if (writeJSONFile(FILES.bookings, bookings)) {
-    res.json(bookings[idx]);
+app.put('/api/vehicles/:id', (req, res) => {
+  const vehicles = readJSONFile(FILES.vehicles);
+  const idx = vehicles.findIndex(item => item.id === req.params.id);
+  if (idx === -1) return res.status(404).json({ error: 'Veicolo non trovato' });
+  vehicles[idx] = { ...vehicles[idx], ...req.body };
+  if (writeJSONFile(FILES.vehicles, vehicles)) {
+    res.json(vehicles[idx]);
   } else {
-    res.status(500).json({ error: 'Errore aggiornamento booking' });
+    res.status(500).json({ error: 'Errore aggiornamento veicolo' });
   }
 });
 
-app.delete('/api/bookings/:id', (req, res) => {
-  let bookings = readJSONFile(FILES.bookings);
-  const idx = bookings.findIndex(item => item.id === req.params.id);
-  if (idx === -1) return res.status(404).json({ error: 'Booking non trovato' });
-  const deleted = bookings[idx];
-  bookings = bookings.filter(item => item.id !== req.params.id);
-  if (writeJSONFile(FILES.bookings, bookings)) {
+app.delete('/api/vehicles/:id', (req, res) => {
+  let vehicles = readJSONFile(FILES.vehicles);
+  const idx = vehicles.findIndex(item => item.id === req.params.id);
+  if (idx === -1) return res.status(404).json({ error: 'Veicolo non trovato' });
+  const deleted = vehicles[idx];
+  vehicles = vehicles.filter(item => item.id !== req.params.id);
+  if (writeJSONFile(FILES.vehicles, vehicles)) {
     res.json(deleted);
   } else {
-    res.status(500).json({ error: 'Errore eliminazione booking' });
+    res.status(500).json({ error: 'Errore eliminazione veicolo' });
   }
 });
 
@@ -514,15 +453,18 @@ app.listen(PORT, () => {
   console.log(`🚀 Backend VitaApp avviato su http://localhost:${PORT}`);
   console.log(`📁 Dati letti dalla cartella: ${DATA_DIR}`);
   console.log('📋 API disponibili:');
-  console.log('   - GET/POST/PUT/DELETE /api/scadenze');
-  console.log('   - GET/POST/PUT/DELETE /api/proprieta');
-  console.log('   - GET/POST/PUT/DELETE /api/documenti');
-  console.log('   - GET/POST/PUT/DELETE /api/spese');
-  console.log('   - GET/POST/PUT/DELETE /api/eventi');
-  console.log('   - GET/POST/PUT/DELETE /api/contatti');
-  console.log('   - GET/POST/PUT/DELETE /api/veicoli');
+  console.log('   - GET/POST/PUT/DELETE /api/deadlines');
+  console.log('   - GET/POST/PUT/DELETE /api/properties');
+  console.log('   - GET/POST/PUT/DELETE /api/documents');
+  console.log('   - GET/POST/PUT/DELETE /api/expenses');
+  console.log('   - GET/POST/PUT/DELETE /api/events');
+  console.log('   - GET/POST/PUT/DELETE /api/contacts');
+  console.log('   - GET/POST/PUT/DELETE /api/vehicles');
   console.log('   - GET/POST/PUT/DELETE /api/bookings');
   console.log('   - GET/POST/PUT/DELETE /api/workouts');
   console.log('   - GET/PUT /api/profile');
-  console.log('   - GET /api/dashboard');
+  console.log('   - GET /api/dashboard/summary');
 });
+
+// Serve static files from the frontend/dist directory
+app.use(express.static(path.join(__dirname, '..', 'frontend', 'dist')));

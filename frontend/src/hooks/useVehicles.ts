@@ -11,7 +11,7 @@ export const useVehicles = () => {
     try {
       setLoading(true);
       setError(null);
-      const data = await apiService.getVeicoli();
+      const data = await apiService.getVehicles();
       setVehicles(data);
     } catch (error) {
       console.error('Error loading vehicles:', error);
@@ -27,7 +27,7 @@ export const useVehicles = () => {
 
   const createVehicle = async (newVehicle: Vehicle) => {
     try {
-      const createdVehicle = await apiService.createVeicolo(newVehicle);
+      const createdVehicle = await apiService.createVehicle(newVehicle);
       setVehicles(prev => [...prev, createdVehicle]);
     } catch (error) {
       console.error('Error creating vehicle:', error);
@@ -37,7 +37,7 @@ export const useVehicles = () => {
 
   const updateVehicle = async (id: string, updatedVehicle: Vehicle) => {
     try {
-      await apiService.updateVeicolo(id, updatedVehicle);
+      await apiService.updateVehicle(id, updatedVehicle);
       setVehicles(prev => prev.map(v => (v.id === id ? updatedVehicle : v)));
     } catch (error) {
       console.error('Error updating vehicle:', error);
@@ -47,7 +47,7 @@ export const useVehicles = () => {
 
   const deleteVehicle = async (id: string) => {
     try {
-      await apiService.deleteVeicolo(id);
+      await apiService.deleteVehicle(id);
       setVehicles(prev => prev.filter(v => v.id !== id));
     } catch (error) {
       console.error('Error deleting vehicle:', error);

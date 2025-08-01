@@ -12,7 +12,7 @@ export const useDeadlines = () => {
     try {
       setLoading(true);
       setError(null);
-      const data = await apiService.getScadenze();
+      const data = await apiService.getDeadlines();
       setDeadlines(data);
     } catch (error) {
       console.error('Errore caricamento scadenze:', error);
@@ -35,7 +35,7 @@ export const useDeadlines = () => {
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       };
-      const createdDeadline = await apiService.createScadenza(newDeadline);
+      const createdDeadline = await apiService.createDeadline(newDeadline);
       setDeadlines(prev => [...prev, createdDeadline]);
       return createdDeadline;
     } catch (error) {
@@ -47,7 +47,7 @@ export const useDeadlines = () => {
 
   const updateDeadline = async (id: string, deadlineData: UpdateDeadlineInput) => {
     try {
-      const updatedDeadline = await apiService.updateScadenza(id, {
+      const updatedDeadline = await apiService.updateDeadline(id, {
         ...deadlineData,
         updatedAt: new Date().toISOString()
       });
@@ -64,7 +64,7 @@ export const useDeadlines = () => {
 
   const deleteDeadline = async (id: string) => {
     try {
-      await apiService.deleteScadenza(id);
+      await apiService.deleteDeadline(id);
       setDeadlines(prev => prev.filter(d => d.id !== id));
     } catch (error) {
       console.error('Error deleting deadline:', error);
@@ -75,7 +75,7 @@ export const useDeadlines = () => {
 
   const toggleDeadlineCompletion = async (id: string, isCompleted: boolean) => {
     try {
-      const updatedDeadline = await apiService.updateScadenza(id, { isCompleted });
+      const updatedDeadline = await apiService.updateDeadline(id, { isCompleted });
       setDeadlines(prev =>
         prev.map(d => (d.id === id ? { ...d, isCompleted: updatedDeadline.isCompleted } : d))
       );

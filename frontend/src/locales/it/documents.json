@@ -4,7 +4,7 @@
   "loading": "Caricamento documenti...",
   "title": "Documenti",
   "addNew": "Aggiungi Nuovo Documento",
-  "dataSource": "🗄️ Dati caricati da: <code>/data/documenti.json</code>",
+  "dataSource": "🗄️ Dati caricati da: <code>/data/documents.json</code>",
   "storageUsage": "Utilizzo Archiviazione",
   "searchPlaceholder": "Cerca documenti...",
   "filterByCategory": "Filtra per categoria",

@@ -12,19 +12,25 @@ const readJsonFile = (filename) => {
 
 router.get('/all', (req, res) => {
   try {
-    const scadenze = readJsonFile('scadenze.json');
-    const documenti = readJsonFile('documenti.json');
-    const eventi = readJsonFile('eventi.json');
+    const deadlines = readJsonFile('deadlines.json');
+    const documents = readJsonFile('documents.json');
+    const events = readJsonFile('events.json');
 
     const allItems = [
-      ...scadenze.map(item => ({ ...item, type: 'scadenza' })),
-      ...documenti.map(item => ({ ...item, type: 'documento' })),
-      ...eventi.map(item => ({ ...item, type: 'evento' }))
+      ...deadlines.map(item => ({ ...item, type: 'deadline' })),
+      ...documents.map(item => ({ ...item, type: 'document' })),
+      ...events.map(item => ({ ...item, type: 'event' }))
     ];
 
     const upcomingItems = allItems
-      .filter(item => !item.completed && new Date(item.dueDate) >= new Date())
-      .sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
+      .filter(item => {
+        // Only consider items that have a dueDate and a completed status for this filter
+        if (item.type === 'deadline') {
+          return !item.completed && new Date(item.dueDate) >= new Date();
+        }
+        return false; // Exclude documents and events from this specific filter
+      })
+      .sort((a, b) => new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime());
 
     res.json(upcomingItems);
   } catch (error) {

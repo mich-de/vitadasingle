@@ -42,13 +42,13 @@ vitaapp/
 ├── 📁 data/            # JSON database files
 │   ├── bookings.json   # Reservation data
 │   ├── expenses.json   # Financial records
-│   ├── contatti.json   # Contacts data
-│   ├── documenti.json  # Documents data
-│   ├── eventi.json     # Events data
-│   ├── proprieta.json  # Properties data
-│   ├── scadenze.json   # Deadlines data
-│   ├── spese.json      # Expenses data
-│   ├── veicoli.json    # Vehicles data
+│   ├── contacts.json   # Contacts data
+│   ├── documents.json  # Documents data
+│   ├── events.json     # Events data
+│   ├── properties.json  # Properties data
+│   ├── deadlines.json   # Deadlines data
+│   ├── expenses.json      # Expenses data
+│   ├── vehicles.json    # Vehicles data
 │   └── workouts.json   # Workouts data
 ├── scripts/            # Various utility scripts
 ├── .gitignore          # Git ignore file

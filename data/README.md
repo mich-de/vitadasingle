@@ -6,7 +6,7 @@ Questa cartella contiene tutti i file JSON per memorizzare i dati dell'applicazi
 
 ### 📄 File disponibili:
 
-#### 🗓️ `scadenze.json`
+#### 🗓️ `deadlines.json`
 Gestisce tutte le scadenze importanti:
 - Documenti in scadenza
 - Contratti e assicurazioni
@@ -20,7 +20,7 @@ Elenco delle proprietà e beni:
 - Investimenti
 - **Campi principali:** id, tipo, valore, note, documenti, spese
 
-#### 📋 `documenti.json`
+#### 📋 `documents.json`
 Archivio documenti personali:
 - Documenti d'identità
 - Patenti
@@ -34,7 +34,7 @@ Gestione budget e spese ricorrenti:
 - Utenze
 - **Campi principali:** id, categoria, tipo, importo, frequenza, attivo
 
-#### 📅 `eventi.json`
+#### 📅 `events.json`
 Calendario eventi e attività:
 - Appuntamenti medici
 - Scadenze burocratiche
@@ -59,7 +59,7 @@ Rubrica contatti importanti:
 
 ```javascript
 // Leggere scadenze
-const scadenze = JSON.parse(fs.readFileSync('./data/scadenze.json'));
+const deadlines = JSON.parse(fs.readFileSync('./data/deadlines.json'));
 
 // Aggiungere nuova scadenza
 const nuovaScadenza = {
@@ -73,10 +73,10 @@ const nuovaScadenza = {
   completato: false
 };
 
-scadenze.push(nuovaScadenza);
+deadlines.push(nuovaScadenza);
 
 // Salvare
-fs.writeFileSync('./data/scadenze.json', JSON.stringify(scadenze, null, 2));
+fs.writeFileSync('./data/deadlines.json', JSON.stringify(deadlines, null, 2));
 ```
 
 ## 🔒 Note importanti:

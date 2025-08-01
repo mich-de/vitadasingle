@@ -11,7 +11,7 @@ export const useEvents = () => {
     try {
       setLoading(true);
       setError(null);
-      const data = await apiService.getEventi();
+      const data = await apiService.getEvents();
       setEvents(data);
     } catch (error) {
       console.error('Error loading events:', error);
@@ -27,7 +27,7 @@ export const useEvents = () => {
 
   const createEvent = async (newEvent: Event) => {
     try {
-      const createdEvent = await apiService.createEvento(newEvent);
+      const createdEvent = await apiService.createEvent(newEvent);
       setEvents(prev => [...prev, createdEvent]);
     } catch (error) {
       console.error('Error creating event:', error);
@@ -37,7 +37,7 @@ export const useEvents = () => {
 
   const updateEvent = async (id: string, updatedEvent: Event) => {
     try {
-      await apiService.updateEvento(id, updatedEvent);
+      await apiService.updateEvent(id, updatedEvent);
       setEvents(prev => prev.map(e => (e.id === id ? updatedEvent : e)));
     } catch (error) {
       console.error('Error updating event:', error);
@@ -47,7 +47,7 @@ export const useEvents = () => {
 
   const deleteEvent = async (id: string) => {
     try {
-      await apiService.deleteEvento(id);
+      await apiService.deleteEvent(id);
       setEvents(prev => prev.filter(e => e.id !== id));
     } catch (error) {
       console.error('Error deleting event:', error);

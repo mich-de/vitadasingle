@@ -28,5 +28,5 @@
     "sat": "Sab",
     "sun": "Dom"
   },
-  "dataSource": "📅 Dati caricati da:<br><code>/data/scadenze.json</code><br><code>/data/eventi.json</code><br><code>/data/bookings.json</code>"
+  "dataSource": "📅 Dati caricati da:<br><code>/data/deadlines.json</code><br><code>/data/events.json</code><br><code>/data/bookings.json</code>"
 }

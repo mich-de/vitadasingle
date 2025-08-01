@@ -11,7 +11,7 @@ export const useDocuments = () => {
     try {
       setLoading(true);
       setError(null);
-      const data = await apiService.getDocumenti();
+      const data = await apiService.getDocuments();
       setDocuments(data);
     } catch (error) {
       console.error('Error loading documents:', error);
@@ -27,7 +27,7 @@ export const useDocuments = () => {
 
   const createDocument = async (newDocument: Document) => {
     try {
-      const createdDocument = await apiService.createDocumento(newDocument);
+      const createdDocument = await apiService.createDocument(newDocument);
       setDocuments(prev => [...prev, createdDocument]);
     } catch (error) {
       console.error('Error creating document:', error);
@@ -37,7 +37,7 @@ export const useDocuments = () => {
 
   const updateDocument = async (id: string, updatedDocument: Document) => {
     try {
-      await apiService.updateDocumento(id, updatedDocument);
+      await apiService.updateDocument(id, updatedDocument);
       setDocuments(prev => prev.map(d => (d.id === id ? updatedDocument : d)));
     } catch (error) {
       console.error('Error updating document:', error);
@@ -47,7 +47,7 @@ export const useDocuments = () => {
 
   const deleteDocument = async (id: string) => {
     try {
-      await apiService.deleteDocumento(id);
+      await apiService.deleteDocument(id);
       setDocuments(prev => prev.filter(d => d.id !== id));
     } catch (error) {
       console.error('Error deleting document:', error);

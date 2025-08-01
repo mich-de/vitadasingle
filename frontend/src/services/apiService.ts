@@ -24,7 +24,7 @@ export class ApiService {
 
   constructor(baseUrl: string = API_BASE_URL) {
     // In development, use relative URLs to leverage Vite's proxy
-    this.baseUrl = isDevelopment ? '' : baseUrl;
+    this.baseUrl = baseUrl;
   }
 
   // Helper per gestire response
@@ -88,126 +88,118 @@ export class ApiService {
     return this.handleResponse<T>(response);
   }
 
-  // === SCADENZE API ===
-  async getScadenze(): Promise<Deadline[]> {
-    return this.get<Deadline[]>('/scadenze');
+  // === DEADLINES API ===
+  async getDeadlines(): Promise<Deadline[]> {
+    return this.get<Deadline[]>('/deadlines');
   }
 
-  async createScadenza(scadenza: CreateDeadlineInput): Promise<Deadline> {
-    return this.post<Deadline>('/scadenze', scadenza);
+  async createDeadline(deadline: CreateDeadlineInput): Promise<Deadline> {
+    return this.post<Deadline>('/deadlines', deadline);
   }
 
-  async updateScadenza(id: string, scadenza: UpdateDeadlineInput): Promise<Deadline> {
-    return this.put<Deadline>(`/scadenze/${id}`, scadenza);
+  async updateDeadline(id: string, deadline: UpdateDeadlineInput): Promise<Deadline> {
+    return this.put<Deadline>(`/deadlines/${id}`, deadline);
   }
 
-  async deleteScadenza(id: string): Promise<Deadline> {
-    return this.delete<Deadline>(`/scadenze/${id}`);
+  async deleteDeadline(id: string): Promise<Deadline> {
+    return this.delete<Deadline>(`/deadlines/${id}`);
   }
 
-  // === PROPRIETÀ API ===
-  async getProprieta(): Promise<Property[]> {
-    return this.get<Property[]>('/proprieta');
+  // === PROPERTIES API ===
+  async getProperties(): Promise<Property[]> {
+    return this.get<Property[]>('/properties');
   }
 
-  async createProprieta(proprieta: Property): Promise<Property> {
-    return this.post<Property>('/proprieta', proprieta);
+  async createProperty(property: Property): Promise<Property> {
+    return this.post<Property>('/properties', property);
   }
 
-  async updateProprieta(id: string, proprieta: Partial<Property>): Promise<Property> {
-    return this.put<Property>(`/proprieta/${id}`, proprieta);
+  async updateProperty(id: string, property: Partial<Property>): Promise<Property> {
+    return this.put<Property>(`/properties/${id}`, property);
   }
 
-  async deleteProprieta(id: string): Promise<Property> {
-    return this.delete<Property>(`/proprieta/${id}`);
+  async deleteProperty(id: string): Promise<Property> {
+    return this.delete<Property>(`/properties/${id}`);
   }
 
-  // === DOCUMENTI API ===
-  async getDocumenti(): Promise<Document[]> {
-    return this.get<Document[]>('/documenti');
+  // === DOCUMENTS API ===
+  async getDocuments(): Promise<Document[]> {
+    return this.get<Document[]>('/documents');
   }
 
-  async createDocumento(documento: Document): Promise<Document> {
-    return this.post<Document>('/documenti', documento);
+  async createDocument(document: Document): Promise<Document> {
+    return this.post<Document>('/documents', document);
   }
 
-  async updateDocumento(id: string, documento: Partial<Document>): Promise<Document> {
-    return this.put<Document>(`/documenti/${id}`, documento);
+  async updateDocument(id: string, document: Partial<Document>): Promise<Document> {
+    return this.put<Document>(`/documents/${id}`, document);
   }
 
-  async deleteDocumento(id: string): Promise<Document> {
-    return this.delete<Document>(`/documenti/${id}`);
+  async deleteDocument(id: string): Promise<Document> {
+    return this.delete<Document>(`/documents/${id}`);
   }
 
-  // === SPESE API ===
-  async getSpese(): Promise<Expense[]> {
-    return this.get<Expense[]>('/spese');
+  // === EXPENSES API ===
+  async getExpenses(): Promise<Expense[]> {
+    return this.get<Expense[]>('/expenses');
   }
 
-  async createSpesa(spesa: Expense): Promise<Expense> {
-    return this.post<Expense>('/spese', spesa);
+  async createExpense(expense: Expense): Promise<Expense> {
+    return this.post<Expense>('/expenses', expense);
   }
 
-  async updateSpesa(id: string, spesa: Partial<Expense>): Promise<Expense> {
-    return this.put<Expense>(`/spese/${id}`, spesa);
+  async updateExpense(id: string, expense: Partial<Expense>): Promise<Expense> {
+    return this.put<Expense>(`/expenses/${id}`, expense);
   }
 
-  async deleteSpesa(id: string): Promise<Expense> {
-    return this.delete<Expense>(`/spese/${id}`);
+  async deleteExpense(id: string): Promise<Expense> {
+    return this.delete<Expense>(`/expenses/${id}`);
   }
 
-  // === EVENTI API ===
-  async getEventi(): Promise<Event[]> {
-    return this.get<Event[]>('/eventi');
+  // === EVENTS API ===
+  async getEvents(): Promise<Event[]> {
+    return this.get<Event[]>('/events');
   }
 
-  async createEvento(evento: Event): Promise<Event> {
-    return this.post<Event>('/eventi', evento);
+  async createEvent(event: Event): Promise<Event> {
+    return this.post<Event>('/events', event);
   }
 
-  async updateEvento(id: string, evento: Partial<Event>): Promise<Event> {
-    return this.put<Event>(`/eventi/${id}`, evento);
+  async updateEvent(id: string, event: Partial<Event>): Promise<Event> {
+    return this.put<Event>(`/events/${id}`, event);
   }
 
-  async deleteEvento(id: string): Promise<Event> {
-    return this.delete<Event>(`/eventi/${id}`);
+  async deleteEvent(id: string): Promise<Event> {
+    return this.delete<Event>(`/events/${id}`);
   }
 
-  // === CONTATTI API ===
-  async getContatti(): Promise<Contact[]> {
-    return this.get<Contact[]>('/contatti');
+  // === CONTACTS API ===
+  async getContacts(): Promise<Contact[]> {
+    return this.get<Contact[]>('/contacts');
   }
 
-  async createContatto(contatto: Contact): Promise<Contact> {
-    return this.post<Contact>('/contatti', contatto);
+  async createContact(contact: Contact): Promise<Contact> {
+    return this.post<Contact>('/contacts', contact);
   }
 
-  async updateContatto(id: string, contatto: Partial<Contact>): Promise<Contact> {
-    return this.put<Contact>(`/contatti/${id}`, contatto);
+  async updateContact(id: string, contact: Partial<Contact>): Promise<Contact> {
+    return this.put<Contact>(`/contacts/${id}`, contact);
   }
 
-  async deleteContatto(id: string): Promise<Contact> {
-    return this.delete<Contact>(`/contatti/${id}`);
+  async deleteContact(id: string): Promise<Contact> {
+    return this.delete<Contact>(`/contacts/${id}`);
   }
 
-  // === VEICOLI API ===
-  async getVeicoli(): Promise<Vehicle[]> {
-    return this.get<Vehicle[]>('/veicoli');
+  // === VEHICLES API ===
+  async getVehicles(): Promise<Vehicle[]> {
+    return this.get<Vehicle[]>('/vehicles');
   }
 
-  async createVeicolo(veicolo: Vehicle): Promise<Vehicle> {
-    return this.post<Vehicle>('/veicoli', veicolo);
+  async createVehicle(vehicle: Vehicle): Promise<Vehicle> {
+    return this.post<Vehicle>('/vehicles', vehicle);
   }
 
-  async updateVeicolo(id: string, veicolo: Partial<Vehicle>): Promise<Vehicle> {
-    return this.put<Vehicle>(`/veicoli/${id}`, veicolo);
-  }
-
-  async deleteVeicolo(id: string): Promise<Vehicle> {
-    return this.delete<Vehicle>(`/veicoli/${id}`);
-  }
-
-  // === WORKOUT API ===
+  // === WORKOUTS API ===
   async getWorkouts(): Promise<Workout[]> {
     return this.get<Workout[]>('/workouts');
   }
@@ -224,18 +216,12 @@ export class ApiService {
     return this.delete<Workout>(`/workouts/${id}`);
   }
 
-  // === DASHBOARD API ===
-  async getDashboardSummary(): Promise<DashboardStats> {
-    return this.get<DashboardStats>('/dashboard/summary');
-  }
-
-
   // === BOOKINGS API ===
   async getBookings(): Promise<Booking[]> {
     return this.get<Booking[]>('/bookings');
   }
 
-  async createBooking(booking: Partial<Booking>): Promise<Booking> {
+  async createBooking(booking: Booking): Promise<Booking> {
     return this.post<Booking>('/bookings', booking);
   }
 
@@ -252,12 +238,25 @@ export class ApiService {
     return this.get<any>('/profile');
   }
 
-  async createProfile(profile: any): Promise<any> {
-    return this.post<any>('/profile', profile);
-  }
-
   async updateProfile(profile: any): Promise<any> {
     return this.put<any>('/profile', profile);
+  }
+
+  // === DASHBOARD API ===
+  async getDashboardRecentActivity(): Promise<any[]> {
+    return this.get<any[]>('/dashboard/recent-activity');
+  }
+
+  async getDashboardUpcomingEvents(): Promise<Event[]> {
+    return this.get<Event[]>('/dashboard/upcoming-events');
+  }
+
+  async getDashboardOverdueDeadlines(): Promise<Deadline[]> {
+    return this.get<Deadline[]>('/dashboard/overdue-deadlines');
+  }
+
+  async getDashboardMonthlyExpenses(): Promise<any[]> {
+    return this.get<any[]>('/dashboard/monthly-expenses');
   }
 }
 

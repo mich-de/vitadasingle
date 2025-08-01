@@ -24,7 +24,7 @@
   "purchasePrice": "Prezzo di Acquisto",
   "notes": "Note",
   "selectVehicle": "Seleziona un veicolo per vedere i dettagli",
-  "dataLoadedFrom": "🚗 Dati caricati da: <code>/data/veicoli.json</code>",
+  "dataLoadedFrom": "🚗 Dati caricati da: <code>/data/vehicles.json</code>",
   "confirmDelete": "Sei sicuro di voler eliminare questo veicolo?",
   "loadError": "Impossibile caricare i veicoli dal database JSON",
   "noVehiclesFound": "Nessun veicolo trovato nel database JSON.",

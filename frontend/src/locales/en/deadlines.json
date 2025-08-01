@@ -1,7 +1,7 @@
 {
   "title": "Deadlines",
   "addNew": "Add New Deadline",
-  "dataSource": "📅 Data loaded from: <code>/data/scadenze.json</code>",
+  "dataSource": "📅 Data loaded from: <code>/data/deadlines.json</code>",
   "summary": {
     "title": "Deadlines Summary",
     "totalDeadlines": "Total Deadlines",

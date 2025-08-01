@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { format, isToday } from 'date-fns';
+import { useLanguage } from '../../context/LanguageContext';
+import { apiService } from '../../services/apiService';
 
 interface Event {
   id: string;
@@ -10,13 +12,13 @@ interface Event {
 }
 
 const TodaysActivity = () => {
+  const { t } = useLanguage();
   const [todaysEvents, setTodaysEvents] = useState<Event[]>([]);
 
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch('/api/data/eventi.json');
-        const data = await response.json();
+        const data = await apiService.getEvents();
         setTodaysEvents(data.filter((e: Event) => isToday(new Date(e.date))));
       } catch (error) {
         console.error('Error fetching events:', error);
@@ -43,7 +45,7 @@ const TodaysActivity = () => {
             </div>
           ))
         ) : (
-          <p className="text-gray-500 dark:text-gray-400">Nessuna attività per oggi.</p>
+          <p className="text-gray-500 dark:text-gray-400">{t('dashboard.noActivityToday')}</p>
         )}
       </div>
     </div>

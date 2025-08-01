@@ -41,8 +41,8 @@ const CalendarPage: React.FC = () => {
     setError(null);
 
     const [deadlinesResult, eventsResult, bookingsResult] = await Promise.allSettled([
-      apiService.getScadenze(),
-      apiService.getEventi(),
+      apiService.getDeadlines(),
+      apiService.getEvents(),
       apiService.getBookings(),
     ]);
 
@@ -171,86 +171,91 @@ const CalendarPage: React.FC = () => {
   const handleNextMonth = () => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
   const handleToday = () => setCurrentDate(new Date());
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  if (loading) return <div>{t('calendar.loading')}</div>;
+  if (error) return <div>{t('calendar.error')}: {error}</div>;
 
   return (
-    <div className="modern-calendar-container p-4 bg-gray-50">
-      <header className="flex justify-between items-center mb-4">
-        <div className="flex items-center">
-          <h1 className="text-2xl font-bold">Calendar</h1>
-          <div className="ml-6 flex items-center space-x-1 bg-white border border-gray-200 rounded-lg p-1">
-            {["All events", "Shared", "Public", "Archived"].map(f => (
-              <button 
-                key={f}
-                onClick={() => setActiveFilter(f.toLowerCase() as FilterType)}
-                className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${activeFilter === f.toLowerCase() ? 'bg-gray-100 text-gray-800' : 'text-gray-500 hover:bg-gray-50'}`}>
-                {f}
-              </button>
-            ))}
-          </div>
-        </div>
-        <div className="flex items-center space-x-2">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-            <input type="text" placeholder="Search" className="pl-10 pr-4 py-2 w-64 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" />
-          </div>
-          <div className="flex items-center bg-white border border-gray-200 rounded-lg">
-            <button onClick={handlePrevMonth} className="p-2 text-gray-500 hover:bg-gray-50 rounded-l-lg"><ChevronLeft size={20} /></button>
-            <button onClick={handleToday} className="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 border-l border-r">Today</button>
-            <button onClick={handleNextMonth} className="p-2 text-gray-500 hover:bg-gray-50 rounded-r-lg"><ChevronRight size={20} /></button>
-          </div>
-          <select className="px-4 py-2 border border-gray-200 rounded-lg text-sm font-medium focus:ring-2 focus:ring-blue-500 focus:outline-none">
-            <option>Month view</option>
-            <option>Week view</option>
-            <option>Day view</option>
-          </select>
-          <button className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800">
-            <Plus size={16} />
-            <span>Add event</span>
-          </button>
-        </div>
-      </header>
-
-      <div className="flex items-center mb-4">
-        <div className="flex items-baseline">
-          <span className="text-5xl font-bold text-gray-800">{currentDate.toLocaleDateString('en-US', { day: 'numeric' })}</span>
-          <span className="ml-2 text-lg font-medium text-gray-500">{currentDate.toLocaleDateString('en-US', { weekday: 'long' })}</span>
-        </div>
-        <div className="ml-4 text-lg text-gray-600">
-          {currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
-        </div>
-      </div>
-
-      <div className="calendar-grid flex-grow">
-        {['Mon', 'Tues', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(day => (
-          <div key={day} className="calendar-day-header text-sm font-medium text-gray-500 py-2 border-b-2 border-gray-200">{day}</div>
-        ))}
-        {calendarDays.map(({ date, isOtherMonth }, index) => {
-          const dateKey = date.toISOString().slice(0, 10);
-          const dayItems = itemsByDate[dateKey] || [];
-          const isToday = dateKey === new Date().toISOString().slice(0, 10);
-
-          return (
-            <div key={index} className={`calendar-cell border-t border-l border-gray-200 p-2 h-32 flex flex-col ${isOtherMonth ? 'bg-gray-50' : 'bg-white'}`}>
-              <span className={`day-number text-sm font-medium ${isOtherMonth ? 'text-gray-400' : 'text-gray-700'} ${isToday ? 'bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center' : ''}`}>
-                {date.getDate()}
-              </span>
-              <div className="mt-1 space-y-1 overflow-y-auto">
-                {dayItems.slice(0, 3).map(item => (
-                  <div key={item.id} className="event-item text-xs p-1 rounded-md text-white" style={{ backgroundColor: item.color }}>
-                    {item.title}
-                  </div>
-                ))}
-                {dayItems.length > 3 && (
-                  <div className="text-xs text-gray-500 mt-1">{dayItems.length - 3} more...</div>
-                )}
-              </div>
+    <>
+      <p className="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1 mb-4"
+        dangerouslySetInnerHTML={{ __html: t('calendar.dataSource') }}
+      ></p>
+      <div className="modern-calendar-container p-4 bg-gray-50">
+        <header className="flex justify-between items-center mb-4">
+          <div className="flex items-center">
+            <h1 className="text-2xl font-bold">{t('calendar.title')}</h1>
+            <div className="ml-6 flex items-center space-x-1 bg-white border border-gray-200 rounded-lg p-1">
+              {[t('calendar.allEvents'), t('calendar.shared'), t('calendar.public'), t('calendar.archived')].map(f => (
+                <button 
+                  key={f}
+                  onClick={() => setActiveFilter(f.toLowerCase() as FilterType)}
+                  className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${activeFilter === f.toLowerCase() ? 'bg-gray-100 text-gray-800' : 'text-gray-500 hover:bg-gray-50'}`}>
+                  {f}
+                </button>
+              ))}
             </div>
-          );
-        })}
+          </div>
+          <div className="flex items-center space-x-2">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <input type="text" placeholder={t('calendar.searchPlaceholder')} className="pl-10 pr-4 py-2 w-64 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+            </div>
+            <div className="flex items-center bg-white border border-gray-200 rounded-lg">
+              <button onClick={handlePrevMonth} className="p-2 text-gray-500 hover:bg-gray-50 rounded-l-lg"><ChevronLeft size={20} /></button>
+              <button onClick={handleToday} className="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 border-l border-r">{t('calendar.today')}</button>
+              <button onClick={handleNextMonth} className="p-2 text-gray-500 hover:bg-gray-50 rounded-r-lg"><ChevronRight size={20} /></button>
+            </div>
+            <select className="px-4 py-2 border border-gray-200 rounded-lg text-sm font-medium focus:ring-2 focus:ring-blue-500 focus:outline-none">
+              <option>{t('calendar.monthView')}</option>
+              <option>{t('calendar.weekView')}</option>
+              <option>{t('calendar.dayView')}</option>
+            </select>
+            <button className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800">
+              <Plus size={16} />
+              <span>{t('calendar.addEvent')}</span>
+            </button>
+          </div>
+        </header>
+
+        <div className="flex items-center mb-4">
+          <div className="flex items-baseline">
+            <span className="text-5xl font-bold text-gray-800">{currentDate.toLocaleDateString('en-US', { day: 'numeric' })}</span>
+            <span className="ml-2 text-lg font-medium text-gray-500">{currentDate.toLocaleDateString(t('calendar.locale'), { weekday: 'long' })}</span>
+          </div>
+          <div className="ml-4 text-lg text-gray-600">
+            {currentDate.toLocaleDateString(t('calendar.locale'), { month: 'long', year: 'numeric' })}
+          </div>
+
+          <div className="calendar-grid flex-grow">
+            {['Mon', 'Tues', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(day => (
+              <div key={day} className="calendar-day-header text-sm font-medium text-gray-500 py-2 border-b-2 border-gray-200">{t(`calendar.days.${day.toLowerCase()}`)}</div>
+            ))}
+            {calendarDays.map(({ date, isOtherMonth }, index) => {
+              const dateKey = date.toISOString().slice(0, 10);
+              const dayItems = itemsByDate[dateKey] || [];
+              const isToday = dateKey === new Date().toISOString().slice(0, 10);
+
+              return (
+                <div key={index} className={`calendar-cell border-t border-l border-gray-200 p-2 h-32 flex flex-col ${isOtherMonth ? 'bg-gray-50' : 'bg-white'}`}>
+                  <span className={`day-number text-sm font-medium ${isOtherMonth ? 'text-gray-400' : 'text-gray-700'} ${isToday ? 'bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center' : ''}`}>
+                    {date.getDate()}
+                  </span>
+                  <div className="mt-1 space-y-1 overflow-y-auto">
+                    {dayItems.slice(0, 3).map(item => (
+                      <div key={item.id} className="event-item text-xs p-1 rounded-md text-white" style={{ backgroundColor: item.color }}>
+                        {item.title}
+                      </div>
+                    ))}
+                    {dayItems.length > 3 && (
+                      <div className="text-xs text-gray-500 mt-1">{t('calendar.moreEvents', { count: dayItems.length - 3 })}</div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

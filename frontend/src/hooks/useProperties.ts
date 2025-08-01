@@ -12,7 +12,7 @@ export const useProperties = () => {
     try {
       setLoading(true);
       setError(null);
-      const data = await apiService.getProprieta();
+      const data = await apiService.getProperties();
       setProperties(data);
     } catch (error) {
       console.error('Errore caricamento proprietà:', error);
@@ -35,7 +35,7 @@ export const useProperties = () => {
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       };
-      const createdProperty = await apiService.createProprieta(newProperty);
+      const createdProperty = await apiService.createProperty(newProperty);
       setProperties(prev => [...prev, createdProperty]);
       return createdProperty;
     } catch (error) {
@@ -47,7 +47,7 @@ export const useProperties = () => {
 
   const updateProperty = async (id: string, propertyData: UpdatePropertyInput) => {
     try {
-      const updatedProperty = await apiService.updateProprieta(id, propertyData);
+      const updatedProperty = await apiService.updateProperty(id, propertyData);
       setProperties(prev => 
         prev.map(p => p.id === id ? { ...p, ...updatedProperty } : p)
       );
@@ -61,7 +61,7 @@ export const useProperties = () => {
 
   const deleteProperty = async (id: string) => {
     try {
-      await apiService.deleteProprieta(id);
+      await apiService.deleteProperty(id);
       setProperties(prev => prev.filter(p => p.id !== id));
     } catch (error) {
       console.error('Error deleting property:', error);

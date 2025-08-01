@@ -1,9 +1,9 @@
 {
   "contacts": "Contacts",
   "title": "Contacts",
-  "subtitle": "Data loaded from: /data/contatti.json",
+  "subtitle": "Data loaded from: /data/contacts.json",
   "dataLoadedFrom": "📞 Data loaded from",
-  "dataSourcePath": "<code>/data/contatti.json</code>",
+  "dataSourcePath": "<code>/data/contacts.json</code>",
   "addNew": "Add New Contact",
   "addContact": "Add Contact",
   "modifyFilters": "Modify filters",

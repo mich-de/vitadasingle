@@ -24,14 +24,11 @@ const Dashboard = () => {
       setLoading(true);
       setError(null);
       
-      const [summaryData, deadlinesData, expensesData, eventsData] = await Promise.all([
-        apiService.getDashboardSummary(),
-        apiService.getScadenze(), 
-        apiService.getSpese(),
-        apiService.getEventi(),
+      const [deadlinesData, expensesData, eventsData] = await Promise.all([
+        apiService.getDeadlines(), 
+        apiService.getExpenses(),
+        apiService.getEvents(),
       ]);
-
-      setDashboardData(summaryData);
       setUpcomingDeadlines(deadlinesData.filter(d => !d.completed).sort((a, b) => new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime()).slice(0, 5));
       setRecentExpenses(expensesData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 5));
       setUpcomingEvents(eventsData.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()).slice(0, 5));

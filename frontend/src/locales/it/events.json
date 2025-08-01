@@ -1,7 +1,7 @@
 {
   "title": "Eventi",
   "dataSource": "🎉 Dati caricati da",
-  "dataSourcePath": "<code>/data/eventi.json</code>",
+  "dataSourcePath": "<code>/data/events.json</code>",
   "loadError": "Impossibile caricare gli eventi dal database JSON",
   "confirmDelete": "Sei sicuro di voler eliminare questo evento?",
   "deleteError": "Impossibile eliminare l'evento",
@@ -33,10 +33,21 @@
   "noEventsFound": "Nessun evento trovato",
   "addFirstEvent": "Aggiungi il tuo primo evento.",
   "addEvent": "Aggiungi evento",
+  "editTitle": "Modifica evento",
+  "deleteTitle": "Elimina evento",
+  "deleteMessage": "Sei sicuro di voler eliminare l'evento \"{{eventName}}\"",
+  "form": {
+    "title": "Titolo",
+    "startDate": "Data e ora",
+    "location": "Luogo",
+    "category": "Categoria",
+    "description": "Descrizione"
+  },
   "errors": {
     "load": "Impossibile caricare gli eventi.",
-    "create": "Si è verificato un errore durante la creazione dell'evento.",
-    "update": "Si è verificato un errore durante l'aggiornamento dell'evento.",
-    "delete": "Impossibile eliminare l'evento."
+    "create": "Si è verificato un errore during la creazione dell'evento.",
+    "update": "Si è verificato un errore during l'aggiornamento dell'evento.",
+    "delete": "Impossibile eliminare l'evento.",
+    "save": "Impossibile salvare l'evento."
   }
 }
