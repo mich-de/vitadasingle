@@ -1,0 +1,44 @@
+{
+  "errorCreating": "Errore durante la creazione dell'allenamento",
+  "errorUpdating": "Errore durante l'aggiornamento dell'allenamento",
+  "errorDeleting": "Errore durante l'eliminazione dell'allenamento",
+  "title": "Allenamenti",
+  "startWorkout": "Inizia Allenamento",
+  "addNew": "Aggiungi Nuovo Allenamento",
+  "dataSource": "Dati caricati da: <code>/data/workouts.json</code>",
+  "totalWorkouts": "Allenamenti Totali",
+  "thisWeek": "Questa settimana",
+  "totalTime": "Tempo Totale",
+  "avgDuration": "Durata Media",
+  "caloriesBurned": "Calorie Bruciate",
+  "progress": "Progresso",
+  "vsLastWeek": "rispetto alla scorsa settimana",
+  "all": "Tutti",
+  "type": {
+    "strength": "Forza",
+    "cardio": "Cardio",
+    "flexibility": "Flessibilità",
+    "sports": "Sport"
+  },
+  "recent": "Allenamenti Recenti",
+  "intensity": {
+    "low": "Bassa",
+    "moderate": "Moderata",
+    "high": "Alta",
+    "extreme": "Estrema"
+  },
+  "exercises": "Esercizi",
+  "notes": "Note",
+  "viewDetails": "Vedi Dettagli",
+  "loading": "Caricamento allenamenti...",
+  "error": "Errore durante il caricamento degli allenamenti",
+  "retry": "Riprova",
+  "confirmDelete": "Sei sicuro di voler eliminare questo allenamento?",
+  "errorLoading": "Impossibile caricare gli allenamenti dal database JSON",
+  "errors": {
+    "load": "Impossibile caricare gli allenamenti.",
+    "create": "Si è verificato un errore durante la creazione dell'allenamento.",
+    "update": "Si è verificato un errore durante l'aggiornamento dell'allenamento.",
+    "delete": "Impossibile eliminare l'allenamento."
+  }
+}

@@ -1,0 +1,185 @@
+:root {
+  /* Light theme colors - Improved for better visibility */
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --secondary: #e2e8f0;
+  --secondary-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #1e293b; /* Darkened further for better contrast */
+  --accent: #eef2ff;
+  --accent-foreground: #0f172a;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #cbd5e1;
+  --input: #e2e8f0;
+  --ring: #2563eb;
+  --radius: 0.5rem;
+  
+  /* Text colors for light theme - Enhanced contrast */
+  --text-primary: #0f172a;
+  --text-secondary: #1e293b; /* Darkened further for better contrast */
+  --text-muted: #334155; /* Darkened further for better contrast */
+  --background-light: #ffffff;
+  --background-dark: #f1f5f9;
+  --border-light: #cbd5e1;
+  --border-dark: #94a3b8;
+}
+
+.dark {
+  /* Dark theme colors */
+  --background: #111827;
+  --foreground: #f9fafb;
+  --card: #1f2937;
+  --card-foreground: #f9fafb;
+  --popover: #1f2937;
+  --popover-foreground: #f9fafb;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #374151;
+  --secondary-foreground: #f9fafb;
+  --muted: #374151;
+  --muted-foreground: #9ca3af;
+  --accent: #374151;
+  --accent-foreground: #f9fafb;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #374151;
+  --input: #374151;
+  --ring: #3b82f6;
+  
+  /* Text colors for dark theme */
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --background-light: #1f2937;
+  --background-dark: #111827;
+  --border-light: #374151;
+  --border-dark: #4b5563;
+}
+
+/* Apply theme colors */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Text color utilities */
+.text-text-primary-light,
+.text-text-primary-dark {
+  color: var(--text-primary);
+}
+
+.text-text-secondary-light,
+.text-text-secondary-dark {
+  color: var(--text-secondary);
+}
+
+.text-text-muted-light,
+.text-text-muted-dark {
+  color: var(--text-muted);
+}
+
+/* Background color utilities */
+.bg-background-light,
+.bg-background-dark {
+  background-color: var(--background-light);
+}
+
+.bg-background-dark {
+  background-color: var(--background-dark);
+}
+
+/* Border color utilities */
+.border-border-light,
+.border-border-dark {
+  border-color: var(--border-light);
+}
+
+.border-border-dark {
+  border-color: var(--border-dark);
+}
+
+/* Form input styles */
+input, select, textarea {
+  background-color: var(--background-light);
+  color: var(--text-primary);
+  border-color: var(--border-light);
+  transition: all 0.3s ease;
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+  border-color: var(--border-dark);
+}
+
+/* Focus states */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* General classes */
+.bg-background {
+  background-color: var(--background);
+}
+
+.text-foreground {
+  color: var(--foreground);
+}
+
+.bg-card {
+  background-color: var(--card);
+}
+
+.text-card-foreground {
+  color: var(--card-foreground);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.border-border {
+  border-color: var(--border);
+}
+
+.bg-muted {
+  background-color: var(--muted);
+}
+
+.text-muted-foreground {
+  color: var(--muted-foreground);
+}
+
+.bg-destructive {
+  background-color: var(--destructive);
+}
+
+.text-destructive {
+  color: var(--destructive);
+}

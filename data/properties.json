@@ -1,0 +1,61 @@
+[
+  {
+    "id": "1",
+    "name": "Appartamento Piano",
+    "address": "Via Roma 123, Milano, 20100",
+    "type": "rental",
+    "size": 85,
+    "purchaseDate": "2020-05-15",
+    "purchasePrice": 320000,
+    "currentValue": 350000,
+    "notes": "Casa dove vivo attualmente, zona centrale di Milano",
+    "documents": [
+      "atto_compravendita.pdf",
+      "planimetria.pdf"
+    ],
+    "expenses": {
+      "imu": 1200,
+      "tari": 180,
+      "condominio": 1800
+    },
+    "status": "vacant"
+  },
+  {
+    "id": "2",
+    "name": "Casa al mare a Meta",
+    "address": "Via Marina 45, Rimini, 47900",
+    "type": "villa",
+    "size": 110,
+    "purchaseDate": "2022-07-10",
+    "purchasePrice": 280000,
+    "currentValue": 295000,
+    "notes": "Casa per le vacanze estive, a 50 metri dal mare",
+    "documents": [
+      "atto_compravendita_rimini.pdf",
+      "catastale_rimini.pdf"
+    ],
+    "expenses": {
+      "imu": 800,
+      "tari": 120
+    },
+    "status": "vacant"
+  },
+  {
+    "id": "3",
+    "name": "Baita in montagna",
+    "address": "Via Alpina 7, Cortina d'Ampezzo, 32043",
+    "type": "chalet",
+    "size": 65,
+    "purchaseDate": "2023-12-05",
+    "purchasePrice": 190000,
+    "currentValue": 195000,
+    "notes": "Rifugio per le vacanze invernali, ottima per sci",
+    "documents": [
+      "atto_compravendita_cortina.pdf"
+    ],
+    "expenses": {
+      "imu": 400,
+      "tari": 80
+    }
+  }
+]

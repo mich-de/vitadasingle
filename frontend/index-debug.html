@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VitaDashboard - Debug Mode</title>
+    <!-- Debug mode styles -->
+    <style>
+      .debug-panel {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #2d3748;
+        color: white;
+        padding: 15px;
+        z-index: 9999;
+        font-family: 'JetBrains Mono', monospace;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      .debug-panel h3 {
+        margin: 0 0 10px 0;
+        color: #fc8181;
+      }
+      .debug-panel pre {
+        background: #1a202c;
+        padding: 10px;
+        border-radius: 4px;
+        overflow-x: auto;
+        max-height: 200px;
+        overflow-y: auto;
+      }
+      .debug-panel .actions {
+        margin-top: 10px;
+      }
+      .debug-panel button {
+        background: #4a5568;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 5px;
+      }
+      .debug-panel button:hover {
+        background: #2d3748;
+      }
+      .debug-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #4a5568;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 9998;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- Enhanced debug script for catching and analyzing import errors -->
+    <script>
+      // Create debug panel container (initially hidden)
+      const debugPanel = document.createElement('div');
+      debugPanel.className = 'debug-panel';
+      debugPanel.style.display = 'none';
+      document.body.appendChild(debugPanel);
+      
+      // Create toggle button
+      const toggleButton = document.createElement('button');
+      toggleButton.className = 'debug-toggle';
+      toggleButton.textContent = '🐞';
+      toggleButton.title = 'Toggle Debug Panel';
+      toggleButton.onclick = function() {
+        debugPanel.style.display = debugPanel.style.display === 'none' ? 'block' : 'none';
+      };
+      document.body.appendChild(toggleButton);
+      
+      // Error tracking
+      const errors = [];
+      
+      // Enhanced error handler
+      window.addEventListener('error', function(event) {
+        console.error('Global error caught:', event.error);
+        
+        // Add to error list
+        errors.push({
+          message: event.error?.message || 'Unknown error',
+          stack: event.error?.stack || '',
+          module: event.filename || '',
+          timestamp: new Date().toISOString()
+        });
+        
+        // Update debug panel
+        updateDebugPanel();
+        
+        // Show panel automatically for import errors
+        if (event.error && event.error.message && (
+            event.error.message.includes('does not provide an export') ||
+            event.error.message.includes('Failed to resolve import') ||
+            event.error.message.includes('Cannot find module')
+        )) {
+          debugPanel.style.display = 'block';
+        }
+      });
+      
+      // Update debug panel content
+      function updateDebugPanel() {
+        if (errors.length === 0) {
+          debugPanel.innerHTML = `
+            <h3>Debug Mode Active</h3>
+            <p>No errors detected yet. Application is running normally.</p>
+            <div class="actions">
+              <button onclick="clearCache()">Clear Cache</button>
+              <button onclick="debugPanel.style.display='none'">Close</button>
+            </div>
+          `;
+          return;
+        }
+        
+        // Focus on the latest error
+        const latestError = errors[errors.length - 1];
+        
+        debugPanel.innerHTML = `
+          <h3>Import Error Detected</h3>
+          <p><strong>Message:</strong> ${escapeHtml(latestError.message)}</p>
+          <p><strong>Module:</strong> ${escapeHtml(latestError.module)}</p>
+          <p><strong>Time:</strong> ${latestError.timestamp}</p>
+          <details>
+            <summary>Stack Trace</summary>
+            <pre>${escapeHtml(latestError.stack)}</pre>
+          </details>
+          <div class="actions">
+            <button onclick="clearCache()">Clear Cache</button>
+            <button onclick="location.reload()">Reload Page</button>
+            <button onclick="debugPanel.style.display='none'">Close</button>
+          </div>
+          <p>Total errors: ${errors.length} <button onclick="showAllErrors()">Show All</button></p>
+        `;
+      }
+      
+      // Show all errors in console
+      function showAllErrors() {
+        console.group('All Detected Errors');
+        errors.forEach((err, i) => {
+          console.group(`Error ${i+1} - ${err.timestamp}`);
+          console.error('Message:', err.message);
+          console.error('Module:', err.module);
+          console.error('Stack:', err.stack);
+          console.groupEnd();
+        });
+        console.groupEnd();
+        alert('All errors have been logged to console. Press F12 to view.');
+      }
+      
+      // Clear Vite cache
+      function clearCache() {
+        localStorage.removeItem('vite-for-web-dev');
+        const cacheNames = ['vite-deps', 'vite-browser-manifest'];
+        if ('caches' in window) {
+          cacheNames.forEach(name => {
+            caches.delete(name).then(() => {
+              console.log(`Cache ${name} cleared`);
+            });
+          });
+        }
+        alert('Cache cleared. The page will now reload.');
+        location.reload(true); // Force reload from server
+      }
+      
+      // Helper function to escape HTML
+      function escapeHtml(unsafe) {
+        return unsafe
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+      
+      console.log('Enhanced debug mode active - monitoring for import errors...');
+      
+      // Initialize debug panel
+      updateDebugPanel();
+    </script>
+    
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

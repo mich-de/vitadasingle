@@ -1,0 +1,50 @@
+{
+  "title": "Properties",
+  "addNew": "Add New Property",
+  "dataSource": "Data loaded from: <code>/data/proprieta.json</code>",
+  "summary": {
+    "title": "Properties Summary",
+    "totalProperties": "Total Properties",
+    "residential": "Residential",
+    "commercial": "Commercial",
+    "totalValue": "Total Value"
+  },
+  "table": {
+    "property": "Property",
+    "type": "Type",
+    "currentValue": "Current Value",
+    "actions": "Actions"
+  },
+  "type": {
+    "residential": "Residential",
+    "commercial": "Commercial",
+    "rental": "Rental",
+    "villa": "Villa",
+    "chalet": "Chalet",
+    "unknown": "Unknown"
+  },
+  "deleteConfirmTitle": "Delete Property",
+  "deleteConfirmMessage": "Are you sure you want to delete this property? This action cannot be undone.",
+  "form": {
+    "addTitle": "Add New Property",
+    "editTitle": "Edit Property",
+    "name": "Name",
+    "address": "Address",
+    "type": "Type",
+    "purchaseDate": "Purchase Date",
+    "purchasePrice": "Purchase Price",
+    "currentValue": "Current Value",
+    "notes": "Notes",
+    "save": "Save Property"
+  },
+  "deleteModal": {
+    "title": "Delete {{name}}",
+    "message": "Are you sure you want to delete this property? This action cannot be undone."
+  },
+  "errors": {
+    "load": "Could not load properties.",
+    "create": "An error occurred while creating the property.",
+    "update": "An error occurred while updating the property.",
+    "delete": "Could not delete the property."
+  }
+}

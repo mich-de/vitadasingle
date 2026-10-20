@@ -1,0 +1,52 @@
+{
+  "loading": "Caricamento spese dal database JSON...",
+  "delete": "Elimina Spesa",
+  "confirmDelete": "Sei sicuro di voler eliminare questa spesa: {description}?",
+  "itemType": "Spesa",
+  "title": "Spese",
+  "totalExpenses": "Spese Totali",
+  "addExpense": "Aggiungi Spesa",
+  "dataSource": "💰 Dati caricati da: <code>/data/spese.json</code>",
+  "summary": {
+    "title": "Riepilogo Spese",
+    "totalExpenses": "Spese Totali",
+    "averageExpense": "Spesa Media",
+    "numberOfExpenses": "Numero di Spese",
+    "thisMonth": "Questo Mese"
+  },
+  "table": {
+    "date": "Data",
+    "category": "Categoria",
+    "description": "Descrizione",
+    "amount": "Importo",
+    "actions": "Azioni"
+  },
+  "category": {
+    "food": "Cibo",
+    "transport": "Trasporti",
+    "housing": "Casa",
+    "utilities": "Utenze",
+    "entertainment": "Intrattenimento",
+    "health": "Salute",
+    "education": "Istruzione",
+    "other": "Altro"
+  },
+  "form": {
+    "addTitle": "Aggiungi Nuova Spesa",
+    "editTitle": "Modifica Spesa",
+    "date": "Data",
+    "category": "Categoria",
+    "description": "Descrizione",
+    "amount": "Importo",
+    "save": "Salva Spesa",
+    "cancel": "Annulla"
+  },
+  "errors": {
+    "load": "Impossibile caricare le spese dal database JSON."
+  },
+  "messages": {
+    "deleteSuccess": "Spesa eliminata con successo.",
+    "deleteError": "Impossibile eliminare la spesa.",
+    "saveSuccess": "Spesa salvata con successo."
+  }
+}

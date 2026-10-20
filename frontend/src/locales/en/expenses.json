@@ -1,0 +1,52 @@
+{
+  "loading": "Loading expenses from JSON database...",
+  "delete": "Delete Expense",
+  "confirmDelete": "Are you sure you want to delete this expense: {description}?",
+  "itemType": "Expense",
+  "title": "Expenses",
+  "totalExpenses": "Total Expenses",
+  "addExpense": "Add Expense",
+  "dataSource": "💰 Data loaded from: <code>/data/spese.json</code>",
+  "summary": {
+    "title": "Expenses Summary",
+    "totalExpenses": "Total Expenses",
+    "averageExpense": "Average Expense",
+    "numberOfExpenses": "Number of Expenses",
+    "thisMonth": "This Month"
+  },
+  "table": {
+    "date": "Date",
+    "category": "Category",
+    "description": "Description",
+    "amount": "Amount",
+    "actions": "Actions"
+  },
+  "category": {
+    "food": "Food",
+    "transport": "Transport",
+    "housing": "Housing",
+    "utilities": "Utilities",
+    "entertainment": "Entertainment",
+    "health": "Health",
+    "education": "Education",
+    "other": "Other"
+  },
+  "form": {
+    "addTitle": "Add New Expense",
+    "editTitle": "Edit Expense",
+    "date": "Date",
+    "category": "Category",
+    "description": "Description",
+    "amount": "Amount",
+    "save": "Save Expense",
+    "cancel": "Cancel"
+  },
+  "errors": {
+    "load": "Failed to load expenses from the JSON database."
+  },
+  "messages": {
+    "deleteSuccess": "Expense deleted successfully.",
+    "deleteError": "Failed to delete expense.",
+    "saveSuccess": "Expense saved successfully."
+  }
+}

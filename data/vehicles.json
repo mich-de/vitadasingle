@@ -1,0 +1,95 @@
+[
+  {
+    "id": "1",
+    "name": "Fiat 500X",
+    "type": "auto",
+    "licensePlate": "AB123CD",
+    "brand": "Fiat",
+    "model": "500X",
+    "year": 2022,
+    "purchaseDate": "2022-03-15",
+    "purchasePrice": 18000,
+    "currentValue": 15500,
+    "mileage": 45000,
+    "fuelType": "benzina",
+    "insurance": {
+      "company": "Assicurazioni Generali",
+      "policyNumber": "POL123456",
+      "expiryDate": "2025-09-15",
+      "annualCost": 650
+    },
+    "registration": {
+      "expiryDate": "2025-08-31",
+      "annualCost": 180
+    },
+    "inspection": {
+      "lastDate": "2024-03-20",
+      "nextDate": "2026-03-20",
+      "valid": true
+    },
+    "documents": ["libretto.pdf", "assicurazione.pdf", "ultima_revisione.pdf"],
+    "notes": "Auto principale per uso quotidiano, in ottime condizioni"
+  },
+  {
+    "id": "2",
+    "name": "Honda CBR 600",
+    "type": "moto",
+    "licensePlate": "EF456GH",
+    "brand": "Honda",
+    "model": "CBR 600RR",
+    "year": 2020,
+    "purchaseDate": "2020-06-10",
+    "purchasePrice": 8500,
+    "currentValue": 7200,
+    "mileage": 12000,
+    "fuelType": "benzina",
+    "insurance": {
+      "company": "UnipolSai",
+      "policyNumber": "MOTO789012",
+      "expiryDate": "2025-07-30",
+      "annualCost": 320
+    },
+    "registration": {
+      "expiryDate": "2025-06-30",
+      "annualCost": 120
+    },
+    "inspection": {
+      "lastDate": "2023-06-15",
+      "nextDate": "2025-06-15",
+      "valid": true
+    },
+    "documents": ["libretto_moto.pdf", "assicurazione_moto.pdf"],
+    "notes": "Moto per weekend e giri in montagna, perfetta per l'estate"
+  },
+  {
+    "id": "3",
+    "name": "Volkswagen Golf",
+    "type": "auto",
+    "licensePlate": "IJ789KL",
+    "brand": "Volkswagen",
+    "model": "Golf 8",
+    "year": 2023,
+    "purchaseDate": "2023-11-20",
+    "purchasePrice": 25000,
+    "currentValue": 23500,
+    "mileage": 8000,
+    "fuelType": "ibrida",
+    "insurance": {
+      "company": "Allianz",
+      "policyNumber": "HYB345678",
+      "expiryDate": "2025-11-20",
+      "annualCost": 480
+    },
+    "registration": {
+      "expiryDate": "2025-12-31",
+      "annualCost": 160
+    },
+    "inspection": {
+      "lastDate": "2023-11-20",
+      "nextDate": "2027-11-20",
+      "valid": true
+    },
+    "documents": ["libretto_golf.pdf", "garanzia_golf.pdf"],
+    "notes": "Auto nuova ibrida, molto efficiente sui consumi"
+  }
+]

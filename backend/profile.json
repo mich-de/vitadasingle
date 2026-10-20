@@ -1,0 +1,8 @@
+{
+  "id": "1",
+  "name": "Utente Demo",
+  "email": "demo@vitaapp.com",
+  "phone": "+39 123 4567890",
+  "address": "Via Roma 1, 20100 Milano, Italia",
+  "bio": "Questo è un utente demo per VitaApp. Puoi modificare queste informazioni nelle impostazioni del profilo."
+}

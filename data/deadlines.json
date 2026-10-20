@@ -1,0 +1,59 @@
+[
+  {
+    "id": "1",
+    "title": "IMU - Prima rata",
+    "dueDate": "2025-06-16",
+    "category": "taxes",
+    "description": "Pagamento prima rata IMU per l'anno 2025",
+    "completed": false,
+    "priority": "alta",
+    "tags": [],
+    "isCompleted": false,
+    "updatedAt": "2025-07-07T10:41:31.816Z"
+  },
+  {
+    "id": "2",
+    "title": "Assicurazione auto",
+    "dueDate": "2025-05-30",
+    "category": "vehicles",
+    "description": "Rinnovo polizza auto annuale",
+    "completed": false,
+    "priority": "alta"
+  },
+  {
+    "id": "3",
+    "title": "TARI - Tassa sui rifiuti",
+    "dueDate": "2025-07-31",
+    "category": "taxes",
+    "description": "Pagamento tassa sui rifiuti comunale",
+    "completed": false,
+    "priority": "media"
+  },
+  {
+    "id": "4",
+    "title": "IMU - Seconda rata",
+    "dueDate": "2025-12-16",
+    "category": "taxes",
+    "description": "Pagamento seconda rata IMU per l'anno 2025",
+    "completed": false,
+    "priority": "media"
+  },
+  {
+    "id": "5",
+    "title": "Bollo auto",
+    "dueDate": "2025-09-15",
+    "category": "vehicles",
+    "description": "Pagamento bollo auto annuale",
+    "completed": false,
+    "priority": "media"
+  },
+  {
+    "id": "6",
+    "title": "Revisione veicolo",
+    "dueDate": "2025-10-22",
+    "category": "vehicles",
+    "description": "Controllo tecnico periodico del veicolo",
+    "completed": false,
+    "priority": "alta"
+  }
+]

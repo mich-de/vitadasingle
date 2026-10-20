@@ -1,0 +1,12 @@
+{
+  "newFeature": {
+    "title": "New Feature!",
+    "description": "Check out the new calendar view for events.",
+    "time": "5m ago"
+  },
+  "subscription": {
+    "title": "Subscription expiring",
+    "description": "Your subscription will expire in 3 days.",
+    "time": "1h ago"
+  }
+}

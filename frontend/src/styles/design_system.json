@@ -1,0 +1,90 @@
+{
+  "colors": {
+    "background": "#F9F9FB",
+    "sidebarBackground": "#FFFFFF",
+    "cardBackground": "#FFFFFF",
+    "primaryText": "#1A1A1A",
+    "secondaryText": "#8A8A8A",
+    "accent": "#4A90E2",
+    "timeTrackerGradient": "linear-gradient(135deg, #FFC371, #FF5F6D)",
+    "activityBackground": "#2C2C2E",
+    "activityText": "#FFFFFF",
+    "progressBar": "#4A90E2",
+    "progressBarBackground": "#EAEAEA",
+    "iconColor": "#8A8A8A",
+    "borderColor": "#EAEAEA",
+    "white": "#FFFFFF",
+    "black": "#000000",
+    "red": "#FF5F6D"
+  },
+  "typography": {
+    "fontFamily": "'Inter', sans-serif",
+    "h1": {
+      "fontSize": "2.25rem",
+      "fontWeight": "700"
+    },
+    "h2": {
+      "fontSize": "1.5rem",
+      "fontWeight": "600"
+    },
+    "h3": {
+      "fontSize": "1.25rem",
+      "fontWeight": "600"
+    },
+    "body": {
+      "fontSize": "1rem",
+      "fontWeight": "400"
+    },
+    "caption": {
+      "fontSize": "0.875rem",
+      "fontWeight": "400"
+    }
+  },
+  "spacing": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+    "2xl": "48px"
+  },
+  "borderRadius": {
+    "sm": "4px",
+    "md": "8px",
+    "lg": "16px",
+    "full": "9999px"
+  },
+  "shadows": {
+    "soft": "0 4px 12px rgba(0,0,0,0.05)",
+    "medium": "0 8px 16px rgba(0,0,0,0.1)"
+  },
+  "components": {
+    "card": {
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": "16px",
+      "boxShadow": "0 4px 12px rgba(0,0,0,0.05)",
+      "padding": "24px"
+    },
+    "button": {
+      "primary": {
+        "background": "#4A90E2",
+        "color": "#FFFFFF",
+        "borderRadius": "8px",
+        "padding": "10px 20px",
+        "hover": {
+          "background": "#357ABD"
+        }
+      },
+      "secondary": {
+        "background": "#FFFFFF",
+        "color": "#1A1A1A",
+        "border": "1px solid #EAEAEA",
+        "borderRadius": "8px",
+        "padding": "10px 20px",
+        "hover": {
+          "background": "#F9F9FB"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+[
+  {
+    "id": "1",
+    "title": "Revisione trimestrale Q2",
+    "description": "Riunione di revisione dei risultati del secondo trimestre",
+    "date": "2025-07-02",
+    "time": "09:30",
+    "location": "Ufficio centrale - Sala riunioni A",
+    "attendees": 8,
+    "category": "work",
+    "reminder": true,
+    "reminderTime": "30min"
+  },
+  {
+    "id": "2",
+    "title": "Visita medica",
+    "description": "Controllo medico annuale di routine",
+    "date": "2025-07-05",
+    "time": "15:00",
+    "location": "Studio Dr. Rossi - Via Garibaldi 45",
+    "category": "health",
+    "reminder": true,
+    "reminderTime": "1h"
+  },
+  {
+    "id": "3",
+    "title": "Cena con amici",
+    "description": "Cena di gruppo per il compleanno di Marco",
+    "date": "2025-07-07",
+    "time": "20:00",
+    "location": "Ristorante La Tavola - Centro città",
+    "attendees": 6,
+    "category": "social",
+    "reminder": true,
+    "reminderTime": "2h"
+  },
+  {
+    "id": "4",
+    "title": "Vacanze estive",
+    "description": "Partenza per le vacanze in Puglia",
+    "date": "2025-07-15",
+    "time": "06:45",
+    "location": "Polignano a Mare, Puglia",
+    "category": "travel",
+    "reminder": true,
+    "reminderTime": "4h"
+  },
+  {
+    "id": "5",
+    "title": "Corso di fotografia",
+    "description": "Lezione settimanale del corso di fotografia base",
+    "date": "2025-07-10",
+    "time": "18:30",
+    "location": "Centro culturale - Aula 3",
+    "attendees": 15,
+    "category": "personal",
+    "reminder": true,
+    "reminderTime": "1h"
+  },
+  {
+    "id": "6",
+    "title": "Presentazione progetto",
+    "description": "Presentazione finale del progetto VitaApp al team",
+    "date": "2025-07-12",
+    "time": "14:00",
+    "location": "Ufficio - Sala meeting",
+    "attendees": 4,
+    "category": "work",
+    "reminder": true,
+    "reminderTime": "30min"
+  },
+  {
+    "id": "7",
+    "title": "Matrimonio Giulia",
+    "description": "Cerimonia di matrimonio della mia amica Giulia",
+    "date": "2025-07-20",
+    "time": "16:00",
+    "location": "Chiesa di Sant'Antonio - Bergamo",
+    "attendees": 120,
+    "category": "social",
+    "reminder": true,
+    "reminderTime": "1d"
+  },
+  {
+    "id": "8",
+    "title": "Personal trainer",
+    "description": "Sessione di allenamento personalizzato",
+    "date": "2025-07-03",
+    "time": "19:00",
+    "location": "Palestra FitCenter",
+    "category": "health",
+    "reminder": true,
+    "reminderTime": "30min"
+  }
+]

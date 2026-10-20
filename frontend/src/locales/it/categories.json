@@ -1,0 +1,14 @@
+{
+  "work": "Lavoro",
+  "health": "Salute",
+  "social": "Sociale",
+  "travel": "Viaggio",
+  "personal": "Personale",
+  "other": "Altro",
+  "financial": "Finanziaria",
+  "legal": "Legale",
+  "medical": "Medica",
+  "contracts": "Contratti",
+  "taxes": "Tasse",
+  "insurance": "Assicurazione"
+}
